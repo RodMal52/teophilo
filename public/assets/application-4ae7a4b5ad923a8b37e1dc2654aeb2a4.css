@@ -1,0 +1,85 @@
+/* line 6, /Users/ssmini/Workspace/Training/Teophilo/app/assets/stylesheets/home.css.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 10, /Users/ssmini/Workspace/Training/Teophilo/app/assets/stylesheets/home.css.scss */
+.logotop {
+  background-image: url("logo1.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 35%;
+  height: 0;
+  padding-top: 66.64%;
+  margin-top: -60%;
+  margin-left: 35%;
+}
+
+/* line 21, /Users/ssmini/Workspace/Training/Teophilo/app/assets/stylesheets/home.css.scss */
+.shop {
+  background-image: url("Tienda.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 5%;
+  height: 0;
+  padding-top: 66.64%;
+  margin-top: 3%;
+  margin-left: 75%;
+  z-index: 20;
+}
+
+/* line 33, /Users/ssmini/Workspace/Training/Teophilo/app/assets/stylesheets/home.css.scss */
+.share {
+  background-image: url("Share.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 5%;
+  height: 0;
+  padding-top: 66.64%;
+  margin-top: -66.64%;
+  margin-left: 80%;
+  z-index: 20;
+}
+
+/* line 45, /Users/ssmini/Workspace/Training/Teophilo/app/assets/stylesheets/home.css.scss */
+.buscar {
+  background-image: url("Buscar.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 5%;
+  height: 0;
+  padding-top: 66.64%;
+  margin-top: -66.64%;
+  margin-left: 85%;
+  z-index: 20;
+}
+
+/* line 56, /Users/ssmini/Workspace/Training/Teophilo/app/assets/stylesheets/home.css.scss */
+.login {
+  background-image: url("sign-in.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  width: 5%;
+  height: 0;
+  padding-top: 66.64%;
+  margin-top: -66.64%;
+  margin-left: 91%;
+  z-index: 20;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
