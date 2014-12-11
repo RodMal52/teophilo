@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  titulo: MyString
+  text1: MyString
+  text2: MyString
+  text3: MyString
+  text4: MyString
+  text5: MyString
+  text6: MyString
+  dia: 1
+  mes: MyString
+  ano: 1
+
+two:
+  user_id: 
+  titulo: MyString
+  text1: MyString
+  text2: MyString
+  text3: MyString
+  text4: MyString
+  text5: MyString
+  text6: MyString
+  dia: 1
+  mes: MyString
+  ano: 1

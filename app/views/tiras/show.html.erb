@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @tira.user %>
+</p>
+
+<p>
+  <strong>Título:</strong>
+  <%= @tira.titulo %>
+</p>
+
+<p>
+  <strong>Texto cuadro 1:</strong>
+  <%= @tira.text1 %>
+</p>
+
+<p>
+  <strong>Texto cuadro 2:</strong>
+  <%= @tira.text2 %>
+</p>
+
+<p>
+  <strong>Texto cuadro 3:</strong>
+  <%= @tira.text3 %>
+</p>
+
+<p>
+  <strong>Texto cuadro 4:</strong>
+  <%= @tira.text4 %>
+</p>
+
+<p>
+  <strong>Texto cuadro 5:</strong>
+  <%= @tira.text5 %>
+</p>
+
+<p>
+  <strong>Texto cuadro 6:</strong>
+  <%= @tira.text6 %>
+</p>
+
+<p>
+  <strong>Día que será exhibido:</strong>
+  <%= @tira.dia %>
+</p>
+
+<p>
+  <strong>Mes:</strong>
+  <%= @tira.mes %>
+</p>
+
+<p>
+  <strong>Año:</strong>
+  <%= @tira.ano %>
+</p>
+
+<p>
+  <strong>Aprobado:</strong>
+  <%= @tira.aprobado %>
+</p>
+<%= link_to 'Edit', edit_tira_path(@tira) %> |
+<%= link_to 'Back', tiras_path %>

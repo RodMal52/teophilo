@@ -1,0 +1,66 @@
+<%= form_for(@tira) do |f| %>
+  <% if @tira.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tira.errors.count, "error") %> prohibited this tira from being saved:</h2>
+
+      <ul>
+      <% @tira.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :text1 %><br>
+    <%= f.text_field :text1 %>
+  </div>
+  <div class="field">
+    <%= f.label :text2 %><br>
+    <%= f.text_field :text2 %>
+  </div>
+  <div class="field">
+    <%= f.label :text3 %><br>
+    <%= f.text_field :text3 %>
+  </div>
+  <div class="field">
+    <%= f.label :text4 %><br>
+    <%= f.text_field :text4 %>
+  </div>
+  <div class="field">
+    <%= f.label :text5 %><br>
+    <%= f.text_field :text5 %>
+  </div>
+  <div class="field">
+    <%= f.label :text6 %><br>
+    <%= f.text_field :text6 %>
+  </div>
+  <div class="field">
+    <%= f.label :dia %><br>
+    <%= f.number_field :dia %>
+  </div>
+  <div class="field">
+    <%= f.label :mes %><br>
+    <%= f.text_field :mes %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.number_field :ano %>
+  </div>
+
+   <div class="field">
+    <%= f.label :aprobado %><br>
+    <%= f.number_field :aprobado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

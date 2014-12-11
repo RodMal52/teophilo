@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103143556) do
+ActiveRecord::Schema.define(version: 20141211003249) do
+
+  create_table "tiras", force: true do |t|
+    t.integer  "user_id"
+    t.string   "titulo"
+    t.string   "text1"
+    t.string   "text2"
+    t.string   "text3"
+    t.string   "text4"
+    t.string   "text5"
+    t.string   "text6"
+    t.integer  "dia"
+    t.string   "mes"
+    t.integer  "ano"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "aprobado"
+  end
+
+  add_index "tiras", ["user_id"], name: "index_tiras_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
