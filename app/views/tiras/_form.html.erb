@@ -11,55 +11,109 @@
     </div>
   <% end %>
 
-
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.hidden_field :user_id, :value => @user  %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br>
     <%= f.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <p>Personajes Cuadro 1</p>
+    <%= f.select :personaje_cuadro1, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
     <%= f.label :text1 %><br>
     <%= f.text_field :text1 %>
   </div>
   <div class="field">
+    <%= f.label :texto_personaje_cuadro1 %> <br>
+    <%= f.text_field :texto_personaje_cuadro1 %>
+  </div>
+
+  <div class="field">
+    <p>Personajes Cuadro 2</p>
+    <%= f.select :personaje_cuadro2, options_for_select(%w[Teo Teo_y_Camila])%>
+  </div>
+  <div class="field">
     <%= f.label :text2 %><br>
     <%= f.text_field :text2 %>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+            $("#tira_personaje_cuadro2").on("change", function () {
+                if (this.value == "Teo_y_Camila"){
+                  $("#formcontainer2").removeClass("formcontainer2").addClass("formcontainer2alt1");
+                }
+                
+            });
+        });
+  </script>
+
+  </div>
+  <div class="field">
+    <%= f.label :texto_personaje_cuadro2 %> <br>
+    <%= f.text_field :texto_personaje_cuadro2 %>
+  </div>
+
+  <div class="field">
+    <p>Personajes Cuadro 3</p>
+    <%= f.select :personaje_cuadro3, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
     <%= f.label :text3 %><br>
     <%= f.text_field :text3 %>
   </div>
   <div class="field">
+    <%= f.label :texto_personaje_cuadro3 %> <br>
+    <%= f.text_field :texto_personaje_cuadro3 %>
+  </div>
+  <div class="field">
+    <p>Personajes Cuadro 4</p>
+    <%= f.select :personaje_cuadro4, options_for_select(%w[Teo Teo_y_Camila])%>
+  </div>
+  <div class="field">
     <%= f.label :text4 %><br>
     <%= f.text_field :text4 %>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+            $("#tira_personaje_cuadro4").on("change", function () {
+                if (this.value == "Teo_y_Camila"){
+                  $("#formcontainer4").removeClass("formcontainer4").addClass("formcontainer4alt1");
+                }
+                
+            });
+        });
+  </script>
+  </div>
+  <div class="field">
+    <%= f.label :texto_personaje_cuadro4 %> <br>
+    <%= f.text_field :texto_personaje_cuadro4 %>
+  </div>
+  <div class="field">
+    <p>Personajes Cuadro 5</p>
+    <%= f.select :personaje_cuadro5, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
     <%= f.label :text5 %><br>
     <%= f.text_field :text5 %>
   </div>
   <div class="field">
+    <%= f.label :texto_personaje_cuadro5 %> <br>
+    <%= f.text_field :texto_personaje_cuadro5 %>
+  </div>
+  <div class="field">
+    <p>Personajes Cuadro 6</p>
+    <%= f.select :personaje_cuadro6, options_for_select(%w[Teo])%>
+  </div>
+  <div class="field">
     <%= f.label :text6 %><br>
     <%= f.text_field :text6 %>
   </div>
   <div class="field">
-    <%= f.label :dia %><br>
-    <%= f.number_field :dia %>
+    <%= f.label :texto_personaje_cuadro6 %> <br>
+    <%= f.text_field :texto_personaje_cuadro6 %>
   </div>
-  <div class="field">
-    <%= f.label :mes %><br>
-    <%= f.text_field :mes %>
-  </div>
-  <div class="field">
-    <%= f.label :ano %><br>
-    <%= f.number_field :ano %>
-  </div>
-
-   <div class="field">
-    <%= f.label :aprobado %><br>
-    <%= f.number_field :aprobado %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

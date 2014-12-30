@@ -5,45 +5,52 @@
 <div class="logotop"></div>
 
 <ul class="nav">
-	<li>MEMARIOS </li>
-	<li><a href="/tienda">TIENDA</a></li>
-	<li>BLOGS</li>
-	<li>NUESTRAS VOCES</li>
-	<li><a href="/etica">CÓDIGO DE ÉTICA</a></li>
-	<li>ARCHIVO</li>
-	<li><a href="/teo"><a href="/colabora">COLABORA CON NOSOTROS</a></a></li>
+	
 </ul>
 <div class="headerline"></div>
 
 <h1 class="titulo"><%=@tira.titulo%></h1>
 <div class="tira">
-	
 
 	<div class="container1">
 		<p class="texto1"><%=@tira.text1%></p>
+		<p class="textopersonajecuadro1" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
 	</div>
-	<div class="container2">
+	<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+		<div class="container2alt1">
+	<%else%>
+		<div class="container2">
+	<% end %>
 		<p class="texto2"><%=@tira.text2%></p>
+		<p class="textopersonajecuadro2" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
 	</div>
 	<div class="container3">
 		<p class="texto3"><%=@tira.text3%></p>
+		<p class="textopersonajecuadro3" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
 	</div>
-	<div class="container4">
+	<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+		<div class="container4alt1">
+	<%else%>
+		<div class="container4">
+	<% end %>
+	
 		<p class="texto4"><%=@tira.text4%></p>
+		<p class="textopersonajecuadro4" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
 	</div>
 	<div class="container5">
 		<p class="texto5"><%=@tira.text5%></p>
+		<p class="textopersonajecuadro5" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
 	</div>
 	<div class="container6">
 		<p class="texto6"><%=@tira.text6%></p>
+		<p class="textopersonajecuadro6" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
 	</div>
 </div>
 
+
+
 <div class="controlsdiv">
-	<div class="fastrewind"></div>
-	<div class="rewind"></div>
-	<div class="forward"></div>
-	<div class="fastforard"></div>
+	
 </div>
 
 <div class="footerline">
@@ -56,6 +63,7 @@
 	<li><a href="/etica">CÓDIGO DE ÉTICA</a></li>
 	<li><a href="/teo">TEO</a></li>
 	<li><a href="/colabora">COLABORA CON NOSOTROS</a></li>
+	<li><a href="/login">LOGIN</a></li>
 </ul>
 </div>
 

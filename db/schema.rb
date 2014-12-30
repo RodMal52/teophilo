@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211003249) do
+ActiveRecord::Schema.define(version: 20141229204136) do
 
   create_table "tiras", force: true do |t|
     t.integer  "user_id"
@@ -28,6 +28,18 @@ ActiveRecord::Schema.define(version: 20141211003249) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "aprobado"
+    t.string   "personaje_cuadro1"
+    t.string   "personaje_cuadro2"
+    t.string   "personaje_cuadro3"
+    t.string   "personaje_cuadro4"
+    t.string   "personaje_cuadro5"
+    t.string   "personaje_cuadro6"
+    t.string   "texto_personaje_cuadro1"
+    t.string   "texto_personaje_cuadro2"
+    t.string   "texto_personaje_cuadro3"
+    t.string   "texto_personaje_cuadro4"
+    t.string   "texto_personaje_cuadro5"
+    t.string   "texto_personaje_cuadro6"
   end
 
   add_index "tiras", ["user_id"], name: "index_tiras_on_user_id"

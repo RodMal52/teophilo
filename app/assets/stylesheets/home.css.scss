@@ -9,17 +9,24 @@ html, body{
 }
 .logotop{
 	background-image: url("logo1.png");
-	background-size: 70%;
+	background-size: 50%;
     background-repeat: no-repeat;
     width: 35%;
     height: 0;
     padding-top: 66.64%;
-	margin-top: -64%;
-	margin-left: 35%;
+	margin-top: -69%;
+	margin-left: 40%;
 }
 .titulo{
   text-align: center;
   margin-top: 10%;
+}
+
+.titulo1{
+  text-align: center;
+  position: relative;
+  top: -170%;
+  left: 5%;
 }
 .tira {
   width: 80%;
@@ -45,8 +52,9 @@ html, body{
   position: relative;
   left: 5%;
   top: 3%;
-  font-size: 1.0vw;
-  line-height: 1.0vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
 
 }
 .container2 {
@@ -60,13 +68,27 @@ html, body{
   position: relative;
   margin-left: -6%;
 }
+
+.container2alt1 {
+  float: left;
+  display: inline-block;
+  background-image: url("2alt1.jpg");
+  height:60%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+
 .texto2{
   width: 70%;
   position: relative;
   left: 5%;
   top: 3%;
-  font-size: 1.0vw;
-  line-height: 1.0vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
 
 }
 .container3 {
@@ -86,14 +108,27 @@ html, body{
   position: relative;
   left: 5%;
   top: 3%;
-  font-size: 1.0vw;
-  line-height: 1.0vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
 
 }
 
 
 .container4 {
-  background-image: url("4.png");
+  background-image: url("5.png");
+  height:60%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: inline-block;
+  float: left;
+}
+
+.container4alt1 {
+  background-image: url("4alt1.jpg");
   height:60%;
   width:30%;
   background-size:80%;
@@ -108,14 +143,15 @@ html, body{
   position: relative;
   left: 5%;
   top: 3%;
-  font-size: 1.0vw;
-  line-height: 1.0vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
 
 }
 .container5 {
   float: left;
   display: inline-block;
-  background-image: url("5.png");
+  background-image: url("4.png");
   height:60%;
   width:30%;
   background-size:80%;
@@ -128,8 +164,9 @@ html, body{
   position: relative;
   left: 5%;
   top: 3%;
-  font-size: 1.0vw;
-  line-height: 1.0vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
 
 }
 .container6 {
@@ -149,14 +186,15 @@ html, body{
   position: relative;
   left: 5%;
   top: 3%;
-  font-size: 1.0vw;
-  line-height: 1.0vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
 
 }
 
 
 .shop{
-  background-image: url("Tienda.png");
+ 
   background-size: 70%;
     background-repeat: no-repeat;
     width: 5%;
@@ -168,7 +206,7 @@ html, body{
 }
 
 .share{
-  background-image: url("Share.png");
+ 
   background-size: 70%;
     background-repeat: no-repeat;
     width: 5%;
@@ -180,7 +218,6 @@ html, body{
 }
 
 .buscar{
-  background-image: url("Buscar.png");
   background-size: 70%;
     background-repeat: no-repeat;
     width: 5%;
@@ -191,7 +228,6 @@ html, body{
   z-index: 20;
 }
 .login{
-    background-image: url("sign-in.png");
   background-size: 50%;
     background-repeat: no-repeat;
     width: 5%;
@@ -204,7 +240,7 @@ html, body{
 
 .nav{
   list-style-type: none;
-  margin-top: -57%;
+  margin-top: -64%;
 }
 
 .nav li {
@@ -264,10 +300,11 @@ html, body{
   background-repeat:no-repeat;
   position: relative;
   left: -2%;
-  top: 5%;
+  top: 2%;
   width: 102%;
   height: 32px;
   z-index: 6;
+  margin-bottom: -8%;
 }
 
 .mainstage {
@@ -281,11 +318,10 @@ html, body{
 
 .controlsdiv{
   width:57%;
-  height:20%;
+  height:10%;
   margin-left: 18.1%;
   margin-top: 7.5%;
-  background-color: #6fafd4;
-  box-shadow: 5px 5px 2px #888888;
+  
 }
 
 .nav-bottom{
@@ -325,3 +361,286 @@ html, body{
   z-index: 10;
 }
 
+.formcomic{
+  height: 100%;
+  width: 60%;
+  position: relative;
+  left: 35%;
+  float: left;
+  top: -170%;
+}
+
+.formcontainer1 {
+  background-image: url("1.png");
+  height: 35%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  float: left;
+
+}
+.formcontainer2 {
+  float: left;
+  display: inline-block;
+  background-image: url("2.png");
+  height:35%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+.formcontainer2alt1 {
+  float: left;
+  display: inline-block;
+  background-image: url("2alt1.jpg");
+  height:35%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+.formcontainer3 {
+  float: left;
+  display: inline-block;
+  background-image: url("3.png");
+  height:35%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  top:-0.125%;
+  margin-left: -6%;
+}
+.formcontainer4 {
+  background-image: url("5.png");
+  height:60%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: inline-block;
+  float: left;
+}
+.formcontainer4alt1 {
+  background-image: url("4alt1.jpg");
+  height:60%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  display: inline-block;
+  float: left;
+}
+.formcontainer5 {
+  float: left;
+  display: inline-block;
+  background-image: url("4.png");
+  height:60%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+.formcontainer6 {
+  float: left;
+  display: inline-block;
+  background-image: url("6.png");
+  height:60%;
+  width:30%;
+  background-size:80%;
+  background-repeat: no-repeat;
+  position: relative;
+  top:-0.125%;
+  margin-left: -6%;
+}
+
+
+.textopersonajecuadro1{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
+
+}
+.textopersonajecuadro2{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
+
+}
+.textopersonajecuadro3{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
+
+}
+.textopersonajecuadro4{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
+
+}
+.textopersonajecuadro5{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
+
+}
+.textopersonajecuadro6{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-family: FISHfingers;
+
+}
+
+.ntextopersonajecuadro1{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntextopersonajecuadro2{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntextopersonajecuadro3{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntextopersonajecuadro4{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntextopersonajecuadro5{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntextopersonajecuadro6{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+
+.ntexto1{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntexto2{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntexto3{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntexto4{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntexto5{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
+.ntexto6{
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+
+}
