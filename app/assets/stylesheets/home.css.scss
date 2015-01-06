@@ -36,6 +36,27 @@ html, body{
   
 
 }
+
+.social_ext{
+  position: relative;
+  top: -135%;
+  list-style-type: none;
+}
+.fb_ext{
+  top: -140%;
+  position: relative;
+  display: inline-block;
+  float: left;
+
+}
+
+.img_li{
+  height: 15%;
+  width: 25%;
+  left:-10%;
+  position: relative;
+  margin-left: -10%;
+}
 .container1 {
   background-image: url("1.png");
   height: 60%;
