@@ -14,12 +14,23 @@ html, body{
     width: 35%;
     height: 0;
     padding-top: 66.64%;
-	margin-top: -69%;
+	margin-top: -66%;
 	margin-left: 40%;
 }
 .titulo{
   text-align: center;
-  margin-top: 10%;
+  margin-top: 14%;
+  font-size: 1.7vw;
+  line-height: 1.7vw;
+  font-family: Georgia,Times,Times New Roman,serif; 
+  background-color: #132E37;
+  color: #fff;
+  height: 4%;
+  width: 60%;
+  left: 20%;
+  position: relative;
+
+
 }
 
 .titulo1{
@@ -33,29 +44,79 @@ html, body{
   height: 80%;
   position: relative;
   left: 18%;
-  
+
 
 }
 
+.tags{
+  position: relative;
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.1vw;
+  font-size: 1.1vw;
+  color: #fff;
+  background-color: #542B00;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 12%;
+  height: 5%;
+  text-align: center;
+  top: -75%;
+  left: 59%;
+}
+
+
 .social_ext{
   position: relative;
-  top: -135%;
+  top: -145%;
   list-style-type: none;
+}
+.social_ext2{
+  position: relative;
+  top: -145%;
+  left: -5%;
+  list-style-type: none;
+}
+.princ_nav{
+  position: relative;
+  top: -145%;
+  list-style-type: none;
+  left: 45%;
+}
+
+.princ_nav li{
+  float: left;
+  margin-right: 0.5%;
+}
+
+.columnas{
+  width: 100%;
+  position: relative;
+  left: -70%;
+  margin-top: -25%;
+}
+
+.columnas td{
+  font-family: "Parisian";
+  font-size: 2.7vw;
+  text-align: center;
+  width: 50%;
 }
 .fb_ext{
   top: -140%;
   position: relative;
   display: inline-block;
   float: left;
-
+  overflow: hidden;
+  width: 2%;
+  margin-right: 1%;
 }
 
 .img_li{
-  height: 15%;
-  width: 25%;
-  left:-10%;
+  
+  width: 100%;
+  
   position: relative;
-  margin-left: -10%;
+ 
 }
 .container1 {
   background-image: url("1.png");
@@ -66,6 +127,8 @@ html, body{
   position: relative;
   display: inline-block;
   float: left;
+  top: -140%;
+  left: -60%;
 
 }
 .texto1{
@@ -87,8 +150,9 @@ html, body{
   background-size:80%;
   background-repeat: no-repeat;
   position: relative;
-  margin-left: -6%;
-}
+  margin-left: 26%;
+  top: -200%;
+  }
 
 .container2alt1 {
   float: left;
@@ -99,7 +163,8 @@ html, body{
   background-size:80%;
   background-repeat: no-repeat;
   position: relative;
-  margin-left: -6%;
+   margin-left: 26%;
+  top: -200%;
 }
 
 .texto2{
@@ -121,8 +186,8 @@ html, body{
   background-size:80%;
   background-repeat: no-repeat;
   position: relative;
-  top:-0.125%;
-  margin-left: -6%;
+  margin-left: 50%;
+  top: -260%;
 }
 .texto3{
   width: 70%;
@@ -138,7 +203,7 @@ html, body{
 
 .container4 {
   background-image: url("5.png");
-  height:60%;
+  height:61%;
   width:30%;
   background-size:80%;
   background-repeat: no-repeat;
@@ -146,11 +211,13 @@ html, body{
 
   display: inline-block;
   float: left;
+  top: -259%;
+  margin-left: 2%;
 }
 
 .container4alt1 {
   background-image: url("4alt1.jpg");
-  height:60%;
+  height:61%;
   width:30%;
   background-size:80%;
   background-repeat: no-repeat;
@@ -158,6 +225,8 @@ html, body{
 
   display: inline-block;
   float: left;
+  top: -259%;
+  margin-left: 2%;
 }
 .texto4{
   width: 70%;
@@ -173,12 +242,13 @@ html, body{
   float: left;
   display: inline-block;
   background-image: url("4.png");
-  height:60%;
+  height:61%;
   width:30%;
   background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   margin-left: -6%;
+  top: -259%;
 }
 .texto5{
   width: 70%;
@@ -194,13 +264,14 @@ html, body{
   float: left;
   display: inline-block;
   background-image: url("6.png");
-  height:60%;
+  height:61%;
   width:30%;
   background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   top:-0.125%;
   margin-left: -6%;
+  top: -259%;
 }
 .texto6{
   width: 70%;
@@ -317,13 +388,12 @@ html, body{
 }
 
 .headerline{
-  background-image: url("headerline.png");
-  background-repeat:no-repeat;
+  background-color: rgba(153, 153, 153, 0.44); 
   position: relative;
   left: -2%;
   top: 2%;
   width: 102%;
-  height: 32px;
+  height: 2px;
   z-index: 6;
   margin-bottom: -8%;
 }
@@ -338,13 +408,62 @@ html, body{
 }
 
 .controlsdiv{
-  width:57%;
-  height:10%;
-  margin-left: 18.1%;
-  margin-top: 7.5%;
+  width:27%;
+  height:15%;
+  margin-left: 20.1%;
+  position: relative;
+  top: 20.5%;
+  border-width:1px;
+  border-style: solid;
+  margin-bottom: 30%;
   
 }
 
+.bigote{
+  position: relative;
+  top: 1%;
+  left: -1%;
+
+}
+
+.autor_controls{
+  font-family: Georgia,Times,Times New Roman,serif; 
+  font-size: 1.3vw;
+  position: relative;
+  top: -52%;
+  left: 10%;
+}
+.autor_titulo{
+  font-family: Georgia,Times,Times New Roman,serif; 
+  font-size: 1.2vw;
+  position: relative;
+  left: 10%;
+  top: -45%;
+  
+}
+.autor_link{
+  font-family: Georgia,Times,Times New Roman,serif; 
+  font-size: 1.0vw;
+  position: relative;
+  left: 10%;
+  top: -35%;
+  
+}
+.datepp{
+  position: relative;
+  width: 4%;
+ 
+}
+.dateholder{
+  position: relative;
+  top: -155%;
+  left: 29%;
+}
+.calendar{
+  position: relative;
+  top: -59%;
+  left: -24%;
+}
 .nav-bottom{
 
   list-style-type: none;
@@ -359,18 +478,30 @@ html, body{
   margin-right: 3%;
 }
 .footerline{
-  background-image: url("footer.jpg");
+  background-image: url("teofooter.png");
   background-repeat:no-repeat;
   background-size: 100%;
   position: relative;
   left: -2%;
   top: 7%;
   width: 102%;
-  height: 50%;
+  height: 100%;
   z-index: 6;
   margin-bottom: 5%;
 }
-
+.footer_text{
+  position: relative;
+  top: 50%;
+  left: -5%;
+}
+.footer_mision{
+  font-family: "Parisian";
+  font-size: 2.8vw;
+  font-style: bold;
+  position: relative;
+  top: 60%;
+  left: -20%;
+}
 
 .Vector_Smart_Object_copy {
   background-image: url("Vector Smart Object copy.png");
