@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Teophilo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Teophilov2</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale1, user-scalable=no">
 </head>
 <body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
+		  $('#js-centered-navigation-menu').removeClass("show");
+		  
+		  menuToggle.on('click', function(e) {
+		    e.preventDefault();
+		    $('#js-centered-navigation-menu').slideToggle(function(){
+		      if($('#js-centered-navigation-menu').is(':hidden')) {
+		        $('#js-centered-navigation-menu').removeAttr('style');
+		      }
+		    });
+		  });
+		});
+
+	</script>
+	<header class="centered-navigation" role="banner">
+	  <div class="centered-navigation-wrapper">
+	    <a href="/" class="mobile-logo">
+	      <%= image_tag('logo2.png') %>
+	    </a>
+	    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+	    <nav role="navigation">
+	      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+		    <li class="nav-link"><a href="https://www.facebook.com/soyTeophilo?fref=ts
+Teophilo">
+	          <%=image_tag("facebook.png") %>
+	          </a></li>
+	        <li class="nav-link"><a href="https://twitter.com/SOYTEOPHILO">
+	          <%=image_tag("tw.png") %>
+	        </a></li>
+	        <li class="nav-link"><a href="javascript:void(0)">
+	          <%=image_tag("pinterest2.png") %>
+	        </a></li>
+	        <li class="nav-link"><a href="javascript:void(0)">
+	          <%=image_tag("tumblr2.png") %>
+	        </a></li>
+	        <li class="nav-link"><a href="https://plus.google.com/108922343993347697522/posts">
+	          <%=image_tag("gplus.png") %>
+	        </a></li>
+
+	        <li class="nav-link"><a href="javascript:void(0)">INICIO</a></li>
+	     
+	        <li class="nav-link"><a href="javascript:void(0)">MONEROS</a></li>
+	
+	        <li class="nav-link"><a href="javascript:void(0)">NUESTRAS VOCES</a></li>
+	       
+	        <li class="nav-link"><a href="javascript:void(0)">BLOGS</a></li>
+	      
+	        
+	      </ul>
+	      <div class="nav-link logo">
+	          <a href="/" class="logo">
+	           <%= image_tag('logo2.png') %>
+	          </a>
+	          <div class="headerline"></div>
+
+	      </div>
+	    </nav>
+	  </div>
+	</header>
+
 
 <%= yield %>
 

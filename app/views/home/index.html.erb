@@ -1,64 +1,58 @@
-<ul class="social_ext">
-	<li><a href="#" class="fb_ext"><%= image_tag("facebook.png", :class => "img_li") %></a></li>
-	<li><a href="#" class="fb_ext"><%= image_tag("tw.png", :class => "img_li") %></a></li>
-	<li><a href="#" class="fb_ext"><%= image_tag("pinterest2.png", :class => "img_li") %></a></li>
-	<li><a href="#" class="fb_ext"><%= image_tag("tumblr2.png", :class => "img_li") %></a></li>
-	<li><a href="#" class="fb_ext"><%= image_tag("gplus.png", :class => "img_li") %></a></li>
-</ul>
-
-<ul class="princ_nav">
-	<li><a href="/">INICIO</a></li>
-	<li>|</li>
-	<li><a href="#">MONEROS</a></li>
-	<li>|</li>
-	<li><a href="#">NUESTRAS VOCES</a></li>
-	<li>|</li>
-	<li><a href="/teo">TEOPHILO</a></li>
-	<li>|</li>
-	<li><a href="#">BLOGS</a></li>
-
-</ul>
-<div class="logotop">TEOPHILO</div>
-
-<div class="headerline"></div>
 
 <h1 class="titulo"><%=@tira.titulo%></h1>
-<div class="tira">
 
-	<div class="container1">
-		<p class="texto1"><%=@tira.text1%></p>
+<div class="grid-items-lines">
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="container1">
+		<p class="texto"><%=@tira.text1%></p>
 		<p class="textopersonajecuadro1" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
 	</div>
-	<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
 		<div class="container2alt1">
 	<%else%>
 		<div class="container2">
 	<% end %>
-		<p class="texto2"><%=@tira.text2%></p>
+		<p class="texto"><%=@tira.text2%></p>
 		<p class="textopersonajecuadro2" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
 	</div>
-	<div class="container3">
-		<p class="texto3"><%=@tira.text3%></p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="container3">
+		<p class="texto"><%=@tira.text3%></p>
 		<p class="textopersonajecuadro3" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
 	</div>
-	<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
 		<div class="container4alt1">
 	<%else%>
 		<div class="container4">
 	<% end %>
 	
-		<p class="texto4"><%=@tira.text4%></p>
+		<p class="texto"><%=@tira.text4%></p>
 		<p class="textopersonajecuadro4" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
 	</div>
-	<div class="container5">
-		<p class="texto5"><%=@tira.text5%></p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="container5">
+		<p class="texto"><%=@tira.text5%></p>
 		<p class="textopersonajecuadro5" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
 	</div>
-	<div class="container6">
-		<p class="texto6"><%=@tira.text6%></p>
+  </a>
+  <a href="javascript:void(0)" class="grid-item">
+    <div class="container6">
+		<p class="texto"><%=@tira.text6%></p>
 		<p class="textopersonajecuadro6" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
 	</div>
+  </a>
+
+ 
+  <div class="right-cover"></div>
+  <div class="bottom-cover"></div>
 </div>
+
 
 
 
@@ -108,7 +102,8 @@
 	</script>
 
 </div>
-<div class="tags">
+<div class="tags"> <a href='#'>primera</a>, <a href='#'>teo</a>, <a href='#'>debut</a></div>
+<div class="share">
 	<ul class="social_ext2">
 		<li><a href="#" class="fb_ext"><%= image_tag("fbcolor.png", :class => "img_li") %></a></li>
 		<li><a href="#" class="fb_ext"><%= image_tag("twcolor.png", :class => "img_li") %></a></li>
@@ -119,7 +114,6 @@
 		<li><a href="#" class="fb_ext"><%= image_tag("gpluscolor.png", :class => "img_li") %></a></li>
 	</ul>
 </div>
-
 <div class="colaboras">
 	<table class="columnas">
 		<tr><td>COLABORA</td><td>¡ANÚNCIATE!</td></tr>
