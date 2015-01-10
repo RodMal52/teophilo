@@ -16,13 +16,13 @@
   $centered-navigation-item-padding: 1em;
   $centered-navigation-submenu-padding: 1em;
   $centered-navigation-submenu-width: 12em;
-  $centered-navigation-item-nudge: 2.2em;
+  $centered-navigation-item-nudge: 1.5em;
   $horizontal-bar-mode: $large-screen;
-
+  margin-left: 5.0em;
   background-color: $centered-navigation-background;
   border-bottom: 1px solid darken($centered-navigation-background, 6);
   min-height: $centered-navigation-height;
-  width: 100%;
+  width: 88%;
   z-index: 9999;
 
   // Mobile view
@@ -135,9 +135,9 @@
   .logo.nav-link img {
     display: none;
     line-height: 0;
-    margin-left: 30%;
+    margin-left: 0%;
     text-align: center;
-   
+    max-height: $centered-navigation-logo-height*1.5;
     @include media($large-screen) {
       display: inline;
     }

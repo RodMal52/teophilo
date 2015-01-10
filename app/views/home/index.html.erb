@@ -2,13 +2,13 @@
 <h1 class="titulo"><%=@tira.titulo%></h1>
 
 <div class="grid-items-lines">
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="#modal1" class="grid-item">
     <div class="container1">
 		<p class="texto"><%=@tira.text1%></p>
 		<p class="textopersonajecuadro1" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
 	</div>
   </a>
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="#modal2" class="grid-item">
     <% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
 		<div class="container2alt1">
 	<%else%>
@@ -18,13 +18,13 @@
 		<p class="textopersonajecuadro2" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
 	</div>
   </a>
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="#modal3" class="grid-item">
     <div class="container3">
 		<p class="texto"><%=@tira.text3%></p>
 		<p class="textopersonajecuadro3" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
 	</div>
   </a>
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="#modal4" class="grid-item">
     <% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
 		<div class="container4alt1">
 	<%else%>
@@ -35,13 +35,13 @@
 		<p class="textopersonajecuadro4" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
 	</div>
   </a>
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="#modal5" class="grid-item">
     <div class="container5">
 		<p class="texto"><%=@tira.text5%></p>
 		<p class="textopersonajecuadro5" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
 	</div>
   </a>
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="#modal6" class="grid-item">
     <div class="container6">
 		<p class="texto"><%=@tira.text6%></p>
 		<p class="textopersonajecuadro6" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
@@ -53,6 +53,71 @@
   <div class="bottom-cover"></div>
 </div>
 
+<div id="modal1" class="modalDialog">
+	<div style="height:62.5%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container1modal">
+		<p class="texto"><%=@tira.text1%></p>
+		<p class="textopersonajecuadro1" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
+	</div>
+	</div>
+</div>
+
+
+<div id="modal2" class="modalDialog">
+	<div style="height:62.5%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+			<div class="container2alt1modal">
+		<%else%>
+			<div class="container2modal">
+		<% end %>
+			<p class="texto"><%=@tira.text2%></p>
+			<p class="textopersonajecuadro2" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
+		</div>
+	</div>
+</div>
+<div id="modal3" class="modalDialog">
+	<div style="height:62.5%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container3modal">
+		<p class="texto"><%=@tira.text3%></p>
+		<p class="textopersonajecuadro3" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
+	</div>
+	</div>
+</div>
+<div id="modal4" class="modalDialog">
+	<div style="height:62.5%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+		<div class="container4alt1modal">
+	<%else%>
+		<div class="container4modal">
+	<% end %>
+	
+		<p class="texto"><%=@tira.text4%></p>
+		<p class="textopersonajecuadro4" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
+	</div>
+	</div>
+</div>
+<div id="modal5" class="modalDialog">
+	<div style="height:62.5%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container5modal">
+		<p class="texto"><%=@tira.text5%></p>
+		<p class="textopersonajecuadro5" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
+	</div>
+	</div>
+</div>
+<div id="modal6" class="modalDialog">
+	<div style="height:62.5%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container6modal">
+		<p class="texto"><%=@tira.text6%></p>
+		<p class="textopersonajecuadro6" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
+	</div>
+	</div>
+</div>
 
 
 

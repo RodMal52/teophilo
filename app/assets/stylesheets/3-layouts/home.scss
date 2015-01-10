@@ -1,37 +1,176 @@
 .titulo{
   text-align: center;
-  margin-top: 1%;
-  font-size: 2.7vw;
-  line-height: 2.7vw;
+  margin-top: 0.5%;
+  font-size: 1.7vw;
+  line-height: 1.7vw;
   font-family: Georgia,Times,Times New Roman,serif; 
   background-color: #132E37;
   color: #fff;
-  height: 4%;
+  height: 3%;
   width: 60%;
   left: 20%;
   position: relative;
 }
 
-.tira {
-  width: 90%;
-  height: 150%;
-  position: relative;
-  left: 5%;
 
 
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
 }
+
+
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
+}
+
+
+
+
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+
+
 
 .container1 {
   background-image: url("1.png");
   height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 43.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
+  left: 20%;
   
 
 }
+
+.container1modal {
+  background-image: url("1.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+.container2modal {
+  background-image: url("2.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+.container2alt1modal {
+  background-image: url("2alt1.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+.container3modal {
+  background-image: url("3.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+.container4modal {
+  background-image: url("5.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+.container4alt1modal {
+  background-image: url("4alt1.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+.container5modal {
+  background-image: url("4.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+.container6modal {
+  background-image: url("6.png");
+  height: 100%;
+  width:100%;
+  background-size:100% ;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+
 .texto{
   width: 100%;
   position: relative;
@@ -40,6 +179,7 @@
   font-size: 1.6vw;
   line-height: 1.6vw;
   font-family: FISHfingers;
+  text-transform: uppercase;
 
 }
 
@@ -48,34 +188,33 @@
   background-image: url("2.png");
   height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 43.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
-
-  
+  left: 10%;
   }
 
   
 
 .container2alt1 {
   background-image: url("2alt1.jpg");
-  height: 250%;
+    height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 43.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
-  
+  left: 10%;
 }
 
 
 
 .container3 {
   background-image: url("3.png");
-  height: 250%;
+    height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 42.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -83,40 +222,42 @@
 
 .container4 {
   background-image: url("5.png");
-  height: 250%;
+    height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 42.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
+  left: 20%;
   }
 
 .container4alt1 {
   background-image: url("4alt1.jpg");
-  height: 250%;
+    height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 42.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
-  
+  left: 20%;
 }
 
 .container5 {
   background-image: url("4.png");
-  height: 250%;
+    height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 41.5%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
+  left: 10%;
   }
 
 .container6 {
   background-image: url("6.png");
-  height: 250%;
+    height: 250%;
   width:100%;
-  background-size:100%;
+  background-size:80% 42.8%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
