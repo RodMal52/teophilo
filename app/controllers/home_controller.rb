@@ -1,7 +1,19 @@
 class HomeController < ApplicationController
   def index
-  	@tira = Tira.last
+    if params[:id]
+      @tira = Tira.find(params[:id])
+    else
+      @tira = Tira.last  
+    end
+  	
+    
+   
   end
+  def archivo
+    @tiras = Tira.all
+  end
+   
+
   def tienda
   end
   def teo

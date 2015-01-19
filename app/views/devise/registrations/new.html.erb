@@ -1,8 +1,15 @@
-<h2>Sign up</h2>
+<div class="loginform">
+<h2>Registro</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
+    <div><strong>Nombre</strong><br/>
+    <%=f.text_field :first_name, required: true %></div>
+
+    <div><strong>Apellido</strong><br/>
+    <%=f.text_field :last_name, required: true %></div>
+    
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
@@ -12,7 +19,20 @@
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+
+    <div><strong>Cargo</strong><br/>
+    <%=f.text_field :cargo, required: true %></div>
+
+    <div><strong>Institución</strong><br/>
+    <%=f.text_field :inst, required: true %></div>
+
+
+    <div><strong>Sitio Web Personal</strong><br/>
+    <%=f.text_field :sitio, required: true %></div>
+
+
+  <div><%= f.submit "Crear Cuenta" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

@@ -12,7 +12,7 @@
     </div>
   <% end %>
 
-    <%= f.hidden_field :user_id, :value => @user  %>
+    <%= f.hidden_field :user_id, :value => @user.id  %>
   </div>
   <div class="field">
     <%= f.label :titulo %><br>
@@ -44,6 +44,9 @@
             $("#tira_personaje_cuadro2").on("change", function () {
                 if (this.value == "Teo_y_Camila"){
                   $("#formcontainer2").removeClass("formcontainer2").addClass("formcontainer2alt1");
+                }
+                 if (this.value == "Teo"){
+                  $("#formcontainer2").removeClass("formcontainer2alt1").addClass("formcontainer2");
                 }
                 
             });
@@ -81,6 +84,9 @@
                 if (this.value == "Teo_y_Camila"){
                   $("#formcontainer4").removeClass("formcontainer4").addClass("formcontainer4alt1");
                 }
+                if (this.value == "Teo"){
+                  $("#formcontainer4").removeClass("formcontainer4alt1").addClass("formcontainer4");
+                }
                 
             });
         });
@@ -114,9 +120,10 @@
     <%= f.label :texto_personaje_cuadro6 %> <br>
     <%= f.text_field :texto_personaje_cuadro6 %>
   </div>
-  
-  <div class="actions">
+  <br><br>
+  <div class="actions" style="z-index: 999999;">
     <%= f.submit %>
   </div>
+  <br>
 <% end %>
 </div>

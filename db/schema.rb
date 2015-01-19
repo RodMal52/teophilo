@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141229204136) do
+ActiveRecord::Schema.define(version: 20150119053854) do
 
   create_table "tiras", force: true do |t|
     t.integer  "user_id"
@@ -57,6 +57,11 @@ ActiveRecord::Schema.define(version: 20141229204136) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cargo"
+    t.string   "inst"
+    t.string   "sitio"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -1,0 +1,122 @@
+<h1 class="titulo"><%=@tira.titulo%></h1>
+
+<div class="grid-items-lines">
+  <a href="#modal1" class="grid-item">
+    <div class="container1">
+		<p class="texto"><%=@tira.text1%></p>
+		<p class="texto" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
+	</div>
+  </a>
+  <a href="#modal2" class="grid-item">
+    <% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+		<div class="container2alt1">
+	<%else%>
+		<div class="container2">
+	<% end %>
+		<p class="texto"><%=@tira.text2%></p>
+		<p class="texto" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
+	</div>
+  </a>
+  <a href="#modal3" class="grid-item">
+    <div class="container3">
+		<p class="texto"><%=@tira.text3%></p>
+		<p class="texto" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
+	</div>
+  </a>
+  <a href="#modal4" class="grid-item">
+    <% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+		<div class="container4alt1">
+	<%else%>
+		<div class="container4">
+	<% end %>
+	
+		<p class="texto"><%=@tira.text4%></p>
+		<p class="texto" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
+	</div>
+  </a>
+  <a href="#modal5" class="grid-item">
+    <div class="container5">
+		<p class="texto"><%=@tira.text5%></p>
+		<p class="texto" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
+	</div>
+  </a>
+  <a href="#modal6" class="grid-item">
+    <div class="container6">
+		<p class="texto"><%=@tira.text6%></p>
+		<p class="texto" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
+	</div>
+  </a>
+
+ 
+  <div class="right-cover"></div>
+  <div class="bottom-cover"></div>
+</div>
+
+
+
+
+<div id="modal1" class="modalDialog">
+	<div style="height:95%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container1modal">
+		<p class="textomodal"><%=@tira.text1%></p>
+		<p class="textomodal" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
+	</div>
+	</div>
+</div>
+
+
+<div id="modal2" class="modalDialog">
+	<div style="height:95%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+			<div class="container2alt1modal">
+		<%else%>
+			<div class="container2modal">
+		<% end %>
+			<p class="textomodal"><%=@tira.text2%></p>
+			<p class="textomodal" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
+		</div>
+	</div>
+</div>
+<div id="modal3" class="modalDialog">
+	<div style="height:95%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container3modal">
+		<p class="textomodal"><%=@tira.text3%></p>
+		<p class="textomodal" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
+	</div>
+	</div>
+</div>
+<div id="modal4" class="modalDialog">
+	<div style="height:95%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+		<div class="container4alt1modal">
+	<%else%>
+		<div class="container4modal">
+	<% end %>
+	
+		<p class="textomodal"><%=@tira.text4%></p>
+		<p class="textomodal" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
+	</div>
+	</div>
+</div>
+<div id="modal5" class="modalDialog">
+	<div style="height:95%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container5modal">
+		<p class="textomodal"><%=@tira.text5%></p>
+		<p class="textomodal" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
+	</div>
+	</div>
+</div>
+<div id="modal6" class="modalDialog">
+	<div style="height:95%;">
+		<a href="#close" title="Close" class="close">X</a>
+		<div class="container6modal">
+		<p class="textomodal"><%=@tira.text6%></p>
+		<p class="textomodal" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
+	</div>
+	</div>
+</div>

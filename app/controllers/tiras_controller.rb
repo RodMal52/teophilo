@@ -18,6 +18,7 @@ class TirasController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def create
@@ -25,7 +26,7 @@ class TirasController < ApplicationController
     @tira.save
     respond_to do |format|
       if @tira.save
-        format.html { redirect_to @tira, notice: 'Tira was successfully created.' }
+        format.html { redirect_to tiras_path, notice: 'Tira was successfully created.' }
         format.json { render :show, status: :created, location: @tira }
       else
         format.html { render :new }
@@ -39,7 +40,7 @@ class TirasController < ApplicationController
     @tira.update(tira_params)
     respond_to do |format|
       if @tira.update(tira_params)
-        format.html { redirect_to @workout, notice: 'Tira was successfully updated.' }
+        format.html { redirect_to tiras_path, notice: 'Tira was successfully updated.' }
         format.json { render :show, status: :ok, location: @tira }
       else
         format.html { render :edit }

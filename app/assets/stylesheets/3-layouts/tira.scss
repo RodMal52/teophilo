@@ -17,13 +17,24 @@
   width: 50%;
 }
 
+.indexlist{
+  position: relative;
+  left: 15%;
+  width: 70%;
+  margin-top: 3%;
+}
 
+.centersection{
+  position:relative;
+  left: 10%;
+  width:80%;
+}
 
 .comic_new{
   position: fixed;
   width: 60%;
   left: 35%;
-  margin-top: -154%;
+  margin-top: -153%;
 }
 textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple="multiple"]{
   width: 30%;

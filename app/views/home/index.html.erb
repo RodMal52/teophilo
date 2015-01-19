@@ -1,126 +1,20 @@
 
-<h1 class="titulo"><%=@tira.titulo%></h1>
+<%= render "comic"%>
 
-<div class="grid-items-lines">
-  <a href="#modal1" class="grid-item">
-    <div class="container1">
-		<p class="texto"><%=@tira.text1%></p>
-		<p class="textopersonajecuadro1" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
-	</div>
-  </a>
-  <a href="#modal2" class="grid-item">
-    <% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
-		<div class="container2alt1">
-	<%else%>
-		<div class="container2">
-	<% end %>
-		<p class="texto"><%=@tira.text2%></p>
-		<p class="textopersonajecuadro2" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
-	</div>
-  </a>
-  <a href="#modal3" class="grid-item">
-    <div class="container3">
-		<p class="texto"><%=@tira.text3%></p>
-		<p class="textopersonajecuadro3" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
-	</div>
-  </a>
-  <a href="#modal4" class="grid-item">
-    <% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
-		<div class="container4alt1">
-	<%else%>
-		<div class="container4">
-	<% end %>
-	
-		<p class="texto"><%=@tira.text4%></p>
-		<p class="textopersonajecuadro4" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
-	</div>
-  </a>
-  <a href="#modal5" class="grid-item">
-    <div class="container5">
-		<p class="texto"><%=@tira.text5%></p>
-		<p class="textopersonajecuadro5" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
-	</div>
-  </a>
-  <a href="#modal6" class="grid-item">
-    <div class="container6">
-		<p class="texto"><%=@tira.text6%></p>
-		<p class="textopersonajecuadro6" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
-	</div>
-  </a>
-
- 
-  <div class="right-cover"></div>
-  <div class="bottom-cover"></div>
-</div>
-
-<div id="modal1" class="modalDialog">
-	<div style="height:62.5%;">
-		<a href="#close" title="Close" class="close">X</a>
-		<div class="container1modal">
-		<p class="texto"><%=@tira.text1%></p>
-		<p class="textopersonajecuadro1" id="textopersonajecuadro1"><%=@tira.texto_personaje_cuadro1%></p>
-	</div>
-	</div>
-</div>
+<% unless @tira.id == Tira.first.id %>
+	<%=form_tag root_path, :method => 'get' do %>
+		<%=hidden_field_tag :id, Tira.where(["id < ?", @tira.id]).last.id %>
+		<%=submit_tag "<", :name =>nil, :class => 'btn_right' %>
+	<% end%>	
+<%end%>  
 
 
-<div id="modal2" class="modalDialog">
-	<div style="height:62.5%;">
-		<a href="#close" title="Close" class="close">X</a>
-		<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
-			<div class="container2alt1modal">
-		<%else%>
-			<div class="container2modal">
-		<% end %>
-			<p class="texto"><%=@tira.text2%></p>
-			<p class="textopersonajecuadro2" id="textopersonajecuadro2"><%=@tira.texto_personaje_cuadro2%></p>
-		</div>
-	</div>
-</div>
-<div id="modal3" class="modalDialog">
-	<div style="height:62.5%;">
-		<a href="#close" title="Close" class="close">X</a>
-		<div class="container3modal">
-		<p class="texto"><%=@tira.text3%></p>
-		<p class="textopersonajecuadro3" id="textopersonajecuadro3"><%=@tira.texto_personaje_cuadro3%></p>
-	</div>
-	</div>
-</div>
-<div id="modal4" class="modalDialog">
-	<div style="height:62.5%;">
-		<a href="#close" title="Close" class="close">X</a>
-		<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
-		<div class="container4alt1modal">
-	<%else%>
-		<div class="container4modal">
-	<% end %>
-	
-		<p class="texto"><%=@tira.text4%></p>
-		<p class="textopersonajecuadro4" id="textopersonajecuadro4"><%=@tira.texto_personaje_cuadro4%></p>
-	</div>
-	</div>
-</div>
-<div id="modal5" class="modalDialog">
-	<div style="height:62.5%;">
-		<a href="#close" title="Close" class="close">X</a>
-		<div class="container5modal">
-		<p class="texto"><%=@tira.text5%></p>
-		<p class="textopersonajecuadro5" id="textopersonajecuadro5"><%=@tira.texto_personaje_cuadro5%></p>
-	</div>
-	</div>
-</div>
-<div id="modal6" class="modalDialog">
-	<div style="height:62.5%;">
-		<a href="#close" title="Close" class="close">X</a>
-		<div class="container6modal">
-		<p class="texto"><%=@tira.text6%></p>
-		<p class="textopersonajecuadro6" id="textopersonajecuadro6"><%=@tira.texto_personaje_cuadro6%></p>
-	</div>
-	</div>
-</div>
-
-
-
+<% unless @tira.id == Tira.last.id %>
+	<%=form_tag root_path, :method => 'get' do %>
+		<%=hidden_field_tag :id, Tira.where(["id > ?", @tira.id]).first.id %>
+		<%=submit_tag ">", :name =>nil, :class => 'btn_left' %>
+	<% end%>	
+<%end%>    
 <div class="controlsdiv">
 	<div class="corona">
 		<svg style="width: 29px; height: 25px;" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -136,11 +30,15 @@
 		</g>
 		</svg>
 	</div>
-	<div class="autor_controls"><strong>POR DANIEL HERNÁNDEZ ALDACO</strong></div>
-	<div class="autor_titulo">INVESTIGADOR @ MUSEO FRANZ MEYER</div>
-	<div class="autor_link"><a href="http://www.daniel.com">www.daniel.com</a></div>
+	<div class="autor_controls"><strong>POR <%=@tira.user.first_name %> <%=@tira.user.last_name %></strong></div>
+	<div class="autor_titulo"><%=@tira.user.cargo %> @ <%=@tira.user.inst %></div>
+	<div class="autor_link"><a href="http://<%=@tira.user.sitio %>"><%=@tira.user.sitio %></a></div>
 
 </div>
+ 
+
+ 
+
 <div class="calendar">
 	<svg style="width: 74px; height: 95px;" version="1.1" xmlns="http://www.w3.org/2000/svg">
 	<g transform="translate(-5.5,-7.5)">
@@ -148,23 +46,9 @@
 	</g>
 	</svg>
 	<div class="dateholder">
-	<input type="text" id="datepicker" class="datepp"/>
+	<%= link_to "Archivo", archivo_path%>
 	</div>
-	<script>
-		$(function() {
-			$( "#datepicker" ).datepicker("option", "dateFormat", "dd-mm ");
-		});
-	</script>
-	<script >
-		$('#datepicker').datepicker({
-		//comment the beforeShow handler if you want to see the ugly overlay
-		beforeShow: function() {
-		setTimeout(function(){
-		$('.ui-datepicker').css('z-index', 99999999999999);
-		}, 0);
-		}
-		});
-	</script>
+	
 
 </div>
 <div class="tags"> <a href='#'>primera</a>, <a href='#'>teo</a>, <a href='#'>debut</a></div>

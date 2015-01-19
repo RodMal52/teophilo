@@ -1,3 +1,11 @@
+.loginform{
+  position: relative;
+  left: 38%;
+  width: 60%;
+  margin-top: 5%;
+  
+}
+
 .titulo{
   text-align: center;
   margin-top: 0.5%;
@@ -38,9 +46,10 @@
 }
 
 .modalDialog > div {
-  width: 400px;
+  width: 45%;
   position: relative;
-  margin: 10% auto;
+  margin: 1% auto;
+  height: 500px;
   padding: 5px 20px 13px 20px;
   border-radius: 10px;
   background: #fff;
@@ -78,9 +87,9 @@
 
 .container1 {
   background-image: url("1.png");
-  height: 250%;
+  height: 230%;
   width:100%;
-  background-size:80% 43.5%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -168,16 +177,43 @@
   display: inline-block;
 }
 
+.btn_left{
+  position: relative;
+  left: 95%;
+  margin-top: -66.6%;
+  
+}
 
+
+.btn_right{
+  position: relative;
+  left: 2%;
+  margin-top: -63%;
+}
 
 
 .texto{
   width: 100%;
   position: relative;
+  left: 3%;
+  top: 2%;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  font-family: FISHfingers;
+  text-transform: uppercase;
+
+}
+
+
+
+
+.textomodal{
+  width: 90%;
+  position: relative;
   left: 5%;
   top: 2%;
-  font-size: 1.6vw;
-  line-height: 1.6vw;
+  font-size: 1.8vw;
+  line-height: 1.8vw;
   font-family: FISHfingers;
   text-transform: uppercase;
 
@@ -186,9 +222,9 @@
 
 .container2 {
   background-image: url("2.png");
-  height: 250%;
+ height: 230%;
   width:100%;
-  background-size:80% 43.5%;
+  background-size: 80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -199,9 +235,9 @@
 
 .container2alt1 {
   background-image: url("2alt1.jpg");
-    height: 250%;
+   height: 230%;
   width:100%;
-  background-size:80% 43.5%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -212,19 +248,20 @@
 
 .container3 {
   background-image: url("3.png");
-    height: 250%;
+    height: 230%;
   width:100%;
-  background-size:80% 42.5%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
+  left: -2%;
   }
 
 .container4 {
   background-image: url("5.png");
-    height: 250%;
+   height: 230%;
   width:100%;
-  background-size:80% 42.5%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -233,9 +270,9 @@
 
 .container4alt1 {
   background-image: url("4alt1.jpg");
-    height: 250%;
+    height: 230%;
   width:100%;
-  background-size:80% 42.5%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -244,9 +281,9 @@
 
 .container5 {
   background-image: url("4.png");
-    height: 250%;
+    height: 230%;
   width:100%;
-  background-size:80% 41.5%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
@@ -255,12 +292,13 @@
 
 .container6 {
   background-image: url("6.png");
-    height: 250%;
+    height: 230%;
   width:100%;
-  background-size:80% 42.8%;
+  background-size:80%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
+    left: -2%;
   }
 
 
@@ -289,13 +327,14 @@
   font-size: 1.4vw;
   position: relative;
   margin-top: -15%;
-
+  text-transform: uppercase;
   left: 15%;
 }
 .autor_titulo{
   font-family: Georgia,Times,Times New Roman,serif; 
   font-size: 1.3vw;
   position: relative;
+  text-transform: uppercase;
   left: 15%;
   top: -55%;
   
@@ -325,9 +364,10 @@ input.datepp {
 }
 .dateholder{
   position: relative;
-  margin-top: -15%;
+  margin-top: -55%;
   width: 10%;
-  left: 1%;
+  left: 10%;
+  font-family: Georgia,Times,Times New Roman,serif;
 }
 
 
