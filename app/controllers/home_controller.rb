@@ -12,6 +12,11 @@ class HomeController < ApplicationController
   def archivo
     @tiras = Tira.all
   end
+
+  def voces
+    @users = User.all
+    
+  end
    
 
   def tienda

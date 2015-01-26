@@ -1,0 +1,2189 @@
+@charset "UTF-8";
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+
+*/
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family: "Parisian";
+  src: url("Parisian.eot?") format("eot"), url("Parisian.woff") format("woff"), url("Parisian.ttf") format("truetype"), url("Parisian.svg#Parisian") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*@font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+  font-family: "FISHfingers";
+  src: url("Fishfingers.eot?") format("eot"), url("Fishfingers.woff") format("woff"), url("Fishfingers.ttf") format("truetype"), url("Fishfingers.svg#FISHfingers") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bitters 0.10.0
+ * http://bitters.bourbon.io
+ * Copyright 2013–2014 thoughtbot, inc.
+ * MIT License */
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/extends/_button.scss */
+button,
+input[type="submit"] {
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-decoration: none;
+}
+/* line 13, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/extends/_button.scss */
+button:hover,
+input[type="submit"]:hover {
+  background-color: #2c5999;
+  color: white;
+}
+/* line 18, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/extends/_button.scss */
+button:disabled,
+input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 15, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  line-height: 1.25;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 22, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h1 {
+  font-size: 2.25em;
+}
+
+/* line 26, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 30, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h3 {
+  font-size: 1.75em;
+}
+
+/* line 34, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h4 {
+  font-size: 1.5em;
+}
+
+/* line 38, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h5 {
+  font-size: 1.25em;
+}
+
+/* line 42, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+h6 {
+  font-size: 1em;
+}
+
+/* line 46, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+}
+
+/* line 50, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+a {
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  transition: color 0.1s linear;
+  color: #477dca;
+  text-decoration: none;
+}
+/* line 55, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+a:hover {
+  color: #2c5999;
+}
+/* line 59, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+a:active, a:focus {
+  color: #2c5999;
+  outline: none;
+}
+
+/* line 65, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+/* line 74, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 79, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+blockquote {
+  border-left: 2px solid #dddddd;
+  color: #595959;
+  margin: 1.5em 0;
+  padding-left: 0.75em;
+}
+
+/* line 86, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+cite {
+  color: #737373;
+  font-style: italic;
+}
+/* line 90, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_typography.scss */
+cite:before {
+  content: "\2014 \00A0";
+}
+
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+fieldset {
+  background: #f7f7f7;
+  border: 1px solid #dddddd;
+  margin: 0 0 0.75em 0;
+  padding: 1.5em;
+}
+
+/* line 10, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* line 16, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+label {
+  font-weight: bold;
+  margin-bottom: 0.375em;
+}
+/* line 20, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+label.required:after {
+  content: "*";
+}
+/* line 24, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+label abbr {
+  display: none;
+}
+
+/* line 31, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+textarea,
+input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"],
+select[multiple=multiple] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: border-color;
+  -moz-transition: border-color;
+  transition: border-color;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0.5em;
+  width: 100%;
+}
+/* line 44, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+textarea:hover,
+input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+select[multiple=multiple]:hover {
+  border-color: #c4c4c4;
+}
+/* line 48, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+textarea:focus,
+input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
+select[multiple=multiple]:focus {
+  border-color: #477dca;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  outline: none;
+}
+
+/* line 55, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 59, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 64, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 69, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+input[type="file"] {
+  padding-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 74, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_tables.scss */
+th {
+  border-bottom: 1px solid #b7b7b7;
+  font-weight: bold;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_tables.scss */
+td {
+  border-bottom: 1px solid #dddddd;
+  padding: 0.75em 0;
+}
+
+/* line 22, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 2, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_lists.scss */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 20, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 23, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_lists.scss */
+dl dt {
+  font-weight: bold;
+  margin-top: 0.75em;
+}
+/* line 28, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 2, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/base/_buttons.scss */
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* line 2, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation {
+  -webkit-font-smoothing: antialiased;
+  margin-left: 0em;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+  min-height: 60px;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 30, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .mobile-logo {
+  display: inline;
+  float: left;
+  max-height: 60px;
+  padding-left: 1em;
+}
+/* line 36, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .mobile-logo img {
+  max-height: 60px;
+  opacity: 1;
+  padding: .8em 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 30, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation .mobile-logo {
+    display: none;
+  }
+}
+/* line 47, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .centered-navigation-mobile-menu {
+  color: rgba(51, 51, 51, 0.7);
+  display: block;
+  float: right;
+  font-weight: 700;
+  line-height: 60px;
+  margin: 0;
+  padding-right: 0.051em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 47, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation .centered-navigation-mobile-menu {
+    display: none;
+  }
+}
+/* line 62, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .centered-navigation-mobile-menu:hover {
+  color: #333333;
+}
+/* line 69, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .centered-navigation-wrapper {
+  position: relative;
+  z-index: 999;
+}
+/* line 15, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/bourbon/addons/_clearfix.scss */
+.centered-navigation .centered-navigation-wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 76, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul.centered-navigation-menu {
+  -webkit-transform-style: preserve-3d;
+  clear: both;
+  display: none;
+  margin: 0 auto;
+  overflow: visible;
+  padding: 0;
+  width: 100%;
+  z-index: 99999;
+}
+/* line 86, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul.centered-navigation-menu.show {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 76, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.centered-navigation-menu {
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 98, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation .nav-link:first-child {
+    margin-left: 1em;
+  }
+}
+/* line 103, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation #moneros {
+  margin-left: 27%;
+}
+/* line 107, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul li.nav-link {
+  background: white;
+  display: block;
+  line-height: 60px;
+  overflow: hidden;
+  padding-right: 0.051em;
+  text-align: right;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 117, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul li.nav-link a {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  font-family: Georgia, Times, Times New Roman, serif;
+}
+/* line 122, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul li.nav-link a:hover {
+  color: #333333;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 107, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: 60px;
+  }
+  /* line 132, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul li.nav-link a {
+    padding-right: 1em;
+  }
+}
+/* line 138, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .logo.nav-link img {
+  display: none;
+  line-height: 0;
+  margin-left: 80%;
+  text-align: center;
+  max-height: 3.8em;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 138, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation .logo.nav-link img {
+    display: inline;
+  }
+}
+/* line 149, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.nav-link a img {
+  margin-bottom: -0.66667em;
+  max-height: 2em;
+  margin-left: 0%;
+  opacity: 1;
+}
+/* line 156, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation .headerline {
+  background-color: black;
+  position: relative;
+  left: 0%;
+  top: 6%;
+  width: 100%;
+  height: 2px;
+  z-index: 6;
+  margin-bottom: 0%;
+}
+/* line 169, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more.nav-link {
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 169, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation li.more.nav-link {
+    padding-right: 0.051em;
+  }
+}
+/* line 176, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more.nav-link > ul > li:first-child a {
+  padding-top: 1em;
+}
+/* line 180, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more.nav-link a {
+  margin-right: 0.051em;
+}
+/* line 184, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more.nav-link > a {
+  padding-right: 0.6em;
+}
+/* line 188, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more.nav-link > a:after {
+  position: absolute;
+  top: auto;
+  right: -0.4em;
+  bottom: auto;
+  left: auto;
+  color: rgba(51, 51, 51, 0.7);
+  content: '\25BE';
+}
+/* line 195, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more {
+  overflow: visible;
+  padding-right: 0;
+}
+/* line 199, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more a {
+  padding-right: 0.051em;
+}
+/* line 203, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more > a {
+  padding-right: 1.6em;
+  position: relative;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 203, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation li.more > a {
+    margin-right: 0.051em;
+  }
+}
+/* line 211, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more > a:after {
+  content: '›';
+  font-size: 1.2em;
+  position: absolute;
+  right: 0.0255em;
+}
+/* line 219, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation li.more:hover > .submenu {
+  display: block;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 195, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation li.more {
+    padding-right: 0.051em;
+    position: relative;
+  }
+}
+/* line 229, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul.submenu {
+  display: none;
+  padding-left: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 229, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.submenu {
+    left: -0.051em;
+    position: absolute;
+    top: 1.5em;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 239, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.submenu .submenu {
+    left: 11.8em;
+    top: 0;
+  }
+}
+/* line 246, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul.submenu li {
+  display: block;
+  padding-right: 0;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 246, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.submenu li {
+    line-height: 46.15385px;
+  }
+  /* line 253, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.submenu li:first-child > a {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  /* line 258, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.submenu li:last-child > a {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-bottom: .7em;
+  }
+}
+/* line 265, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+.centered-navigation ul.submenu li a {
+  background-color: #f7f7f7;
+  display: inline-block;
+  text-align: right;
+  text-decoration: none;
+  width: 100%;
+}
+@media screen and (min-width: 53.75em) {
+  /* line 265, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/nav.scss */
+  .centered-navigation ul.submenu li a {
+    background-color: white;
+    padding-left: 0.051em;
+    text-align: left;
+    width: 12em;
+  }
+}
+
+/* line 5, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines {
+  -webkit-font-smoothing: antialiased;
+  width: 90%;
+  left: 5%;
+  position: relative;
+}
+/* line 16, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines p {
+  line-height: 1.5em;
+}
+/* line 20, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines a {
+  text-decoration: none;
+}
+/* line 15, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/bourbon/addons/_clearfix.scss */
+.grid-items-lines:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 36, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines .grid-item {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: white;
+  cursor: pointer;
+  float: left;
+  height: 24em;
+  overflow: hidden;
+  padding: 0.0em;
+  width: 100%;
+  /* &:hover {
+     background: transparentize($grid-item-color, .95);
+   }*/
+}
+@media screen and (min-width: 53.75em) {
+  /* line 36, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+  .grid-items-lines .grid-item {
+    width: 33.33333%;
+  }
+}
+/* line 56, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines .grid-item img {
+  display: block;
+  height: 2.5em;
+  margin-bottom: 1.2em;
+  opacity: .2;
+}
+/* line 63, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines .grid-item h1 {
+  color: #333333;
+  font-size: 1.3em;
+  margin-bottom: .4em;
+}
+/* line 69, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines .grid-item p {
+  color: #000;
+}
+@media screen and (min-width: 40em) {
+  /* line 69, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+  .grid-items-lines .grid-item p {
+    max-width: 97%;
+  }
+}
+@media screen and (min-width: 53.75em) {
+  /* line 77, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+  .grid-items-lines .grid-item-big {
+    width: 66.66667%;
+  }
+}
+@media screen and (min-width: 40em) {
+  /* line 81, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+  .grid-items-lines .grid-item-big p {
+    max-width: 60%;
+  }
+}
+/* line 89, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines .bottom-cover {
+  background: white;
+  bottom: 0px;
+  height: 3px;
+  position: absolute;
+  width: 100%;
+}
+/* line 97, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/2-modules/grid.scss */
+.grid-items-lines .right-cover {
+  background: white;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  width: 4px;
+}
+
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.loginform {
+  position: relative;
+  left: 38%;
+  width: 60%;
+  margin-top: 5%;
+}
+
+/* line 9, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.titulo {
+  text-align: center;
+  margin-top: 0.5%;
+  font-size: 1.7vw;
+  line-height: 1.7vw;
+  font-family: Georgia,Times,Times New Roman,serif;
+  background-color: #132E37;
+  color: #fff;
+  height: 3%;
+  width: 78%;
+  left: 11%;
+  position: relative;
+}
+
+/* line 25, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.modalDialog {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+/* line 43, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 48, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.modalDialog > div {
+  width: 45%;
+  position: relative;
+  margin: 1% auto;
+  height: 500px;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(white, #999999);
+  background: -webkit-linear-gradient(white, #999999);
+  background: -o-linear-gradient(white, #999999);
+}
+
+/* line 64, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.close {
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+
+/* line 83, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.close:hover {
+  background: #00d9ff;
+}
+
+/* line 88, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container1 {
+  background-image: url("1.png");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 20%;
+  border: solid 2px #275d6e;
+}
+
+/* line 102, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container1modal {
+  background-image: url("1.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 112, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container2modal {
+  background-image: url("2.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 122, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container2alt1modal {
+  background-image: url("2alt1.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 132, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container3modal {
+  background-image: url("3.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 142, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container4modal {
+  background-image: url("5.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 152, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container4alt1modal {
+  background-image: url("4alt1.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 162, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container5modal {
+  background-image: url("4.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 171, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container6modal {
+  background-image: url("6.png");
+  height: 100%;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 181, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.btn_left {
+  position: relative;
+  left: 95%;
+  margin-top: -66.6%;
+}
+
+/* line 189, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.btn_right {
+  position: relative;
+  left: 2%;
+  margin-top: -63%;
+}
+
+/* line 196, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.texto {
+  width: 100%;
+  position: relative;
+  font-color: #000;
+  left: 3%;
+  top: 2%;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  font-family: FISHfingers;
+  text-transform: uppercase;
+}
+
+/* line 212, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.textomodal {
+  width: 90%;
+  position: relative;
+  left: 5%;
+  top: 2%;
+  font-size: 1.8vw;
+  line-height: 1.8vw;
+  font-family: FISHfingers;
+  text-transform: uppercase;
+}
+
+/* line 225, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container2 {
+  background-image: url("2.png");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 10%;
+  border: solid 2px #275d6e;
+}
+
+/* line 239, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container2alt1 {
+  background-image: url("2alt1.jpg");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 10%;
+  border: solid 2px #275d6e;
+}
+
+/* line 253, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container3 {
+  background-image: url("3.png");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  border: solid 2px #275d6e;
+}
+
+/* line 265, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container4 {
+  background-image: url("5.png");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 20%;
+  border: solid 2px #275d6e;
+}
+
+/* line 277, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container4alt1 {
+  background-image: url("4alt1.jpg");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 20%;
+  border: solid 2px #275d6e;
+}
+
+/* line 289, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container5 {
+  background-image: url("4.png");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 10%;
+  border: solid 2px #275d6e;
+}
+
+/* line 301, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.container6 {
+  background-image: url("6.png");
+  height: 90%;
+  width: 80%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  left: 0%;
+  border: solid 2px #275d6e;
+}
+
+/* line 314, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.controlsdiv {
+  background-image: url(http://static.parastorage.com/services/skins/2.995.7/images/wysiwyg/core/themes/base/apple_box.png);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  width: 32%;
+  height: 15%;
+  left: 11%;
+  position: relative;
+  margin-top: -3%;
+  border: 0px solid #666666;
+}
+
+/* line 325, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.corona {
+  position: relative;
+  left: 4%;
+  padding-top: 2%;
+}
+
+/* line 330, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.bigote {
+  position: relative;
+  left: 3%;
+}
+
+/* line 335, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.autor_controls {
+  font-family: Georgia,Times,Times New Roman,serif;
+  font-size: 1.4vw;
+  position: relative;
+  margin-top: -15%;
+  text-transform: uppercase;
+  left: 15%;
+}
+
+/* line 343, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.autor_titulo {
+  font-family: Georgia,Times,Times New Roman,serif;
+  font-size: 1.3vw;
+  position: relative;
+  text-transform: uppercase;
+  left: 15%;
+  top: -55%;
+}
+
+/* line 352, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.autor_link {
+  font-family: Georgia,Times,Times New Roman,serif;
+  font-size: 1.2vw;
+  position: relative;
+  left: 15%;
+  top: -45%;
+}
+
+/* line 361, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.calendar {
+  position: relative;
+  margin-top: -7%;
+  left: 50%;
+  width: 10%;
+  margin-bottom: 15%;
+}
+
+/* line 369, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+input.datepp {
+  position: relative;
+  width: 100%;
+}
+
+/* line 375, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.dateholder {
+  position: relative;
+  margin-top: -55%;
+  width: 10%;
+  left: 10%;
+  font-family: Georgia,Times,Times New Roman,serif;
+}
+
+/* line 385, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.tags {
+  position: relative;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 32%;
+  height: 8%;
+  text-align: center;
+  margin-top: -21%;
+  left: 50%;
+  background-color: #542B00;
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.5vw;
+  font-size: 1.4vw;
+  color: #fff;
+}
+
+/* line 401, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.tags a {
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.5vw;
+  font-size: 1.4vw;
+  color: #fff;
+}
+
+/* line 409, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.share {
+  position: relative;
+  width: 39%;
+  left: 60%;
+  margin-top: -16%;
+  margin-bottom: 20%;
+}
+
+/* line 417, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.social_ext2 {
+  position: relative;
+  width: 100%;
+  list-style-type: none;
+}
+
+/* line 423, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.fb_ext {
+  float: left;
+  width: 6%;
+  margin-right: 1%;
+}
+
+/* line 429, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.colaboras {
+  position: relative;
+  width: 88%;
+  left: 6%;
+}
+
+/* line 436, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.columnas tr td {
+  font-family: "Parisian";
+  font-size: 3.7vw;
+  line-height: 0.5vw;
+  text-align: center;
+  width: 25%;
+}
+
+/* line 445, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.img_tbl {
+  width: 70%;
+  height: 70%;
+  margin-bottom: -6%;
+}
+
+/* line 451, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.table_text {
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.3vw;
+  font-size: 1.3vw;
+  margin-top: -3%;
+  margin-bottom: -6%;
+}
+
+/* line 460, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.table_text2 {
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.2vw;
+  font-size: 1.2vw;
+  text-align: justify;
+}
+
+/* line 466, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.footerline {
+  background-image: url("teofooter.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  margin-right: -2%;
+  margin-bottom: 0%;
+}
+
+/* line 478, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.footer_text {
+  position: relative;
+  left: 40%;
+  width: 59%;
+  margin-top: -8.5%;
+}
+
+/* line 484, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.footer_mision {
+  font-family: "Parisian";
+  font-size: 2.8vw;
+  font-style: bold;
+  position: relative;
+  padding-top: 29.5%;
+  left: 25%;
+  width: 30%;
+}
+
+/* line 493, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.footer-bar {
+  background-color: #000;
+  position: relative;
+  width: 104%;
+  height: 15%;
+  z-index: 999;
+  left: -2%;
+}
+
+/* line 502, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.footer-bar ul {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  list-style-type: none;
+  text-align: center;
+}
+
+/* line 510, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+h2, h3, h6 {
+  font-family: Georgia, Times, Times New Roman, serif;
+}
+
+/* line 515, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.cont_margin {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+/* line 15, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/0-plugins/bourbon/addons/_clearfix.scss */
+.cont_margin:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 522, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/home.scss */
+.footer-bar li a {
+  color: #fff;
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.3vw;
+  font-size: 1.3vw;
+}
+
+/*
+@media only screen and (min-width : 321px) {
+  .fb_ext{
+    width: 4%;
+   
+  }
+  .princ_nav{
+    left: 1%;
+    margin-bottom: 5%;
+  }
+
+  .princ_nav li{
+    line-height: 3.0vw;
+    font-size: 2.0vw;
+  }
+
+  .logotop{
+    top: 10%;
+    font-size: 10vw;
+    left: -20%;
+  }
+
+  .headerline{
+    top: 12%;
+  }
+
+  .titulo{
+    margin-top: 20%;
+    font-size: 4.7vw;
+    line-height: 5.8vw;
+    height: 7%;
+    width: 80%;
+    left: 10%;
+    position: relative;
+
+  }
+
+  .tira {
+    height: 170%;
+  }
+  .controlsdiv{
+    top: 880.5%;
+    height: 22%;
+  }
+
+
+  .calendar{
+    top: 885%;
+  }
+
+  .datepp{
+    width: 10%;
+
+   
+  }
+  .dateholder{
+    margin-top: -15%;
+    left: 2%;
+  }
+
+  .tags{
+    height: 8%;
+    top: 873%;
+  }
+
+  .social_ext2{
+    left: 0%;
+  }
+
+  .colaboras{
+    top: 940%;
+  }
+
+  .table_text2{
+    line-height: 2.1vw;
+    font-size: 2.1vw;
+  }
+  .footerline{
+    top: 947%;
+  }
+  .footer_text{
+    position: relative;
+    top: 35%;
+    left: 42%;
+    width: 55%;
+  }
+  .footer_mision{
+    top: 45%;
+    left: 25%;
+  }
+
+}
+
+@media only screen and (min-device-width : 768px){
+  .fb_ext{
+    width: 5%;
+   
+  }
+  .princ_nav{
+    left: 2%;
+    margin-bottom: 5%;
+  }
+
+  .princ_nav li{
+    line-height: 3.0vw;
+    font-size: 2.0vw;
+  }
+
+  .logotop{
+    top: 5%;
+    font-size: 10vw;
+    left: -20%;
+  }
+
+  .headerline{
+    top: 7%;
+  }
+
+  .titulo{
+    margin-top: 20%;
+    font-size: 4.7vw;
+    line-height: 5.7vw;
+    height: 5%;
+    width: 80%;
+    left: 10%;
+    position: relative;
+
+  }
+
+  .tira {
+    height: 90%;
+  }
+  .controlsdiv{
+    top: 460.5%;
+    height: 10%;
+  }
+
+  .autor_controls{
+    font-family: Georgia,Times,Times New Roman,serif; 
+    font-size: 3.3vw;
+    position: relative;
+    top: -28%;
+    left: 15%;
+  }
+  .autor_titulo{
+    font-family: Georgia,Times,Times New Roman,serif; 
+    font-size: 3.2vw;
+    position: relative;
+    left: 15%;
+    top: -15%;
+    
+  }
+  .autor_link{
+    font-family: Georgia,Times,Times New Roman,serif; 
+    font-size: 3.0vw;
+    position: relative;
+    left: 15%;
+    top: -5%;
+    
+  }
+
+
+  .calendar{
+    top: 465%;
+  }
+
+  .datepp{
+    width: 6%;
+
+   
+  }
+  .dateholder{
+    margin-top: -10%;
+    left: 1%;
+  }
+
+  .tags{
+    height: 3%;
+    top: 460%;
+  }
+
+  .social_ext2{
+    left: 4%;
+  }
+
+  .colaboras{
+    top: 490%;
+  }
+
+  .table_text2{
+    line-height: 1.7vw;
+    font-size: 1.7vw;
+  }
+  .footerline{
+    top: 487%;
+  }
+  .footer_text{
+    position: relative;
+    top: 17%;
+    left: 42%;
+    width: 55%;
+  }
+  .footer_mision{
+    top: 25%;
+    left: 25%;
+  }
+
+}
+
+@media only screen and (min-device-width : 1024px){
+  .fb_ext{
+    width: 4%;
+   
+  }
+  .princ_nav{
+    left: 13%;
+    margin-bottom: 5%;
+  }
+
+  .princ_nav li{
+    line-height: 3.0vw;
+    font-size: 2.0vw;
+  }
+
+  .logotop{
+    top: 8%;
+    font-size: 8vw;
+    left: -20%;
+  }
+
+  .headerline{
+    top: 10%;
+  }
+
+  .titulo{
+    margin-top: 20%;
+    font-size: 4.7vw;
+    line-height: 5.8vw;
+    height: 7%;
+    width: 80%;
+    left: 10%;
+    position: relative;
+
+  }
+
+  .tira {
+    height: 90%;
+    left: 8%;
+  }
+
+  .container1 {
+    background-image: url("1.png");
+    height: 60%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    float: left;
+    
+    }
+    .texto1{
+    width: 70%;
+    position: relative;
+    left: 5%;
+    top: 3%;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-family: FISHfingers;
+    }
+    .container2 {
+    float: left;
+    display: inline-block;
+    background-image: url("2.png");
+    height:60%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: 1%;
+
+    }
+    .container2alt1 {
+    float: left;
+    display: inline-block;
+    background-image: url("2alt1.jpg");
+    height:60%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: 1%;
+
+
+    }
+    .texto2{
+    width: 70%;
+    position: relative;
+    left: 5%;
+    top: 3%;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-family: FISHfingers;
+    }
+    .container3 {
+    float: left;
+    display: inline-block;
+    background-image: url("3.png");
+    height:60%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: 1%;
+
+    }
+    .texto3{
+    width: 70%;
+    position: relative;
+    left: 5%;
+    top: 3%;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-family: FISHfingers;
+    }
+    .container4 {
+    background-image: url("5.png");
+    height:48%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    float: left;
+    top: -10%;
+    left: -2%;
+    margin-left: 2%;
+    }
+    .container4alt1 {
+    background-image: url("4alt1.jpg");
+    height:48%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    float: left;
+    top: -10%;
+    left: -2%;
+    margin-left: 2%;
+    }
+    .texto4{
+    width: 70%;
+    position: relative;
+    left: 5%;
+    top: 3%;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-family: FISHfingers;
+    }
+    .container5 {
+    float: left;
+    display: inline-block;
+    background-image: url("4.png");
+    height:48%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -10%;
+    margin-left: -1%;
+   
+    }
+    .texto5{
+    width: 70%;
+    position: relative;
+    left: 5%;
+    top: 3%;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-family: FISHfingers;
+    }
+    .container6 {
+    float: left;
+    display: inline-block;
+    background-image: url("6.png");
+    height:48%;
+    width:30%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -10%;
+    margin-left: 1%;
+    
+    }
+    .texto6{
+    width: 70%;
+    position: relative;
+    left: 5%;
+    top: 3%;
+    font-size: 1.5vw;
+    line-height: 1.5vw;
+    font-family: FISHfingers;
+    }
+    .controlsdiv{
+      top: 0.5%;
+      height: 10%;
+      width: 37%;
+    }
+    .corona{
+      top: -60%;
+      left: 4%;
+    }
+    .bigote{
+      top: -60%;
+      left: 3%;
+      position: relative;
+    }
+
+
+    .autor_controls{
+      font-family: Georgia,Times,Times New Roman,serif; 
+      font-size: 1.6vw;
+      position: relative;
+      top: -128%;
+      left: 15%;
+    }
+    .autor_titulo{
+      font-family: Georgia,Times,Times New Roman,serif; 
+      font-size: 1.5vw;
+      position: relative;
+      left: 15%;
+      top: -125%;
+      
+    }
+    .autor_link{
+      font-family: Georgia,Times,Times New Roman,serif; 
+      font-size: 1.4vw;
+      position: relative;
+      left: 15%;
+      top: -125%;
+      
+    }
+
+
+    .calendar{
+      top: -10%;
+      left: 45%;
+    }
+
+    .datepp{
+      width: 4.5%;
+
+     
+    }
+    .dateholder{
+      margin-top: -7%;
+      left: 1%;
+    }
+
+    .tags{
+      height: 3%;
+      top:-17%;
+      left: 55%;
+      width: 30%;
+    }
+
+    .social_ext2{
+      left: 4%;
+    }
+
+    .colaboras{
+      top: 34%;
+      left: -83%;
+    }
+
+    .columnas  tr td{
+      font-family: "Parisian";
+      font-size: 4.7vw;
+      text-align: center;
+      width: 25%;
+      height: auto;
+    }
+
+    .img_tbl{
+      position: relative;
+      margin-top: 4%;
+    }
+
+
+    .table_text{
+      font-family: Georgia, Times, Times New Roman, serif;
+      line-height: 2.1vw;
+      font-size: 2.1vw;
+    }
+
+    .table_text2{
+      line-height: 1.4vw;
+      font-size: 1.4vw;
+    }
+    .footerline{
+      top: 35%;
+    }
+    .footer_text{
+      position: relative;
+      top: 30%;
+      left: 42%;
+      width: 55%;
+    }
+    .footer_mision{
+      top: 45%;
+      left: 25%;
+    }
+
+
+
+}
+
+@media only screen and (min-device-width : 1280px){
+   .fb_ext{
+      width: 2%;
+     
+    }
+    .princ_nav{
+      left: 22%;
+      margin-bottom: 5%;
+    }
+
+    .princ_nav li{
+      line-height: 2.0vw;
+      font-size: 1.5vw;
+    }
+
+    .logotop{
+      top: 15%;
+      font-size: 8vw;
+      left: -30%;
+    }
+
+    .headerline{
+      top: 20%;
+    }
+
+    .titulo{
+      margin-top: 20%;
+      font-size: 4.7vw;
+      line-height: 5.8vw;
+      height:11%;
+      width: 80%;
+      left: 10%;
+      position: relative;
+
+    }
+
+    .tira {
+      height: 150%;
+      left: 8%;
+    }
+
+
+    .calendar{
+      top: -10%;
+      left: -35%;
+    }
+
+    .datepp{
+      width: 4%;
+
+     
+    }
+    .dateholder{
+      margin-top: -6%;
+      left: 83.3%;
+    }
+
+    .tags{
+      height: 5%;
+      top:-17%;
+      left: 55%;
+      width: 35%;
+    }
+
+    .social_ext2{
+      left: 4%;
+    }
+
+    .colaboras{
+      top: 70%;
+    }
+
+    .footerline{
+      top: 55%;
+    }
+    .footer_text{
+      position: relative;
+      top: 50%;
+      left: 42%;
+      width: 55%;
+    }
+    .footer_mision{
+      top: 65%;
+      left: 25%;
+    }
+
+
+
+}*/
+/* line 1, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.titulo1 {
+  text-align: center;
+  margin-top: 0.5%;
+  font-size: 1.7vw;
+  line-height: 1.7vw;
+  font-family: Georgia,Times,Times New Roman,serif;
+  background-color: #132E37;
+  color: #fff;
+  height: 3%;
+  width: 60%;
+  left: 20%;
+  position: relative;
+}
+
+/* line 15, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.form_new {
+  position: relative;
+  width: 50%;
+}
+
+/* line 20, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.indexlist {
+  position: relative;
+  left: 15%;
+  width: 70%;
+  margin-top: 3%;
+}
+
+/* line 27, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.centersection {
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+
+/* line 33, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.comic_new {
+  position: fixed;
+  width: 60%;
+  left: 35%;
+  margin-top: -145%;
+}
+
+/* line 39, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+textarea, input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"], select[multiple="multiple"] {
+  width: 30%;
+}
+
+/* line 44, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcomic {
+  height: 100%;
+  width: 60%;
+  position: fixed;
+  left: 42%;
+  float: left;
+}
+
+/* line 51, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer1 {
+  background-image: url("1.png");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+/* line 61, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer2 {
+  float: left;
+  display: inline-block;
+  background-image: url("2.png");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+
+/* line 72, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer2alt1 {
+  float: left;
+  display: inline-block;
+  background-image: url("2alt1.jpg");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+
+/* line 83, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer3 {
+  float: left;
+  display: inline-block;
+  background-image: url("3.png");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -0.125%;
+  margin-left: -6%;
+}
+
+/* line 95, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer4 {
+  background-image: url("5.png");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+/* line 105, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer4alt1 {
+  background-image: url("4alt1.jpg");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+/* line 115, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer5 {
+  float: left;
+  display: inline-block;
+  background-image: url("4.png");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: -6%;
+}
+
+/* line 126, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.formcontainer6 {
+  float: left;
+  display: inline-block;
+  background-image: url("6.png");
+  height: 31%;
+  width: 30%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -0.125%;
+  margin-left: -6%;
+}
+
+/* line 139, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntextopersonajecuadro1 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 148, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntextopersonajecuadro2 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 157, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntextopersonajecuadro3 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 166, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntextopersonajecuadro4 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 175, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntextopersonajecuadro5 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 184, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntextopersonajecuadro6 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 193, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntexto1 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 202, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntexto2 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 211, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntexto3 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 220, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntexto4 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 229, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntexto5 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}
+
+/* line 238, /home/rodmal/Documents/work/v2/teophilo/app/assets/stylesheets/3-layouts/tira.scss */
+.ntexto6 {
+  width: 70%;
+  position: relative;
+  left: 5%;
+  top: 3%;
+  font-size: 1.0vw;
+  line-height: 1.0vw;
+  font-family: FISHfingers;
+}

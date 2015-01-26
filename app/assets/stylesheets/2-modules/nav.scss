@@ -3,7 +3,7 @@
   $base-border-radius: 3px !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
+  $base-font-color: $black !default;
   -webkit-font-smoothing: antialiased;  
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -14,15 +14,15 @@
   $centered-navigation-color-hover: $base-font-color;
   $centered-navigation-height: 60px;
   $centered-navigation-item-padding: 1em;
-  $centered-navigation-submenu-padding: 1em;
+  $centered-navigation-submenu-padding: 0.051em;
   $centered-navigation-submenu-width: 12em;
-  $centered-navigation-item-nudge: 1.5em;
+  $centered-navigation-item-nudge: 1.0em;
   $horizontal-bar-mode: $large-screen;
-  margin-left: 5.0em;
+  margin-left: 0em;
   background-color: $centered-navigation-background;
   border-bottom: 1px solid darken($centered-navigation-background, 6);
   min-height: $centered-navigation-height;
-  width: 88%;
+  width: 100%;
   z-index: 9999;
 
   // Mobile view
@@ -35,7 +35,7 @@
 
     img {
       max-height: $centered-navigation-height;
-      opacity: .6;
+      opacity: 1;
       padding: .8em 0;
     }
 
@@ -67,7 +67,7 @@
   // Nav menu
 
   .centered-navigation-wrapper {
-    @include outer-container;
+    
     @include clearfix;
     position: relative;
     z-index: 999;
@@ -89,7 +89,7 @@
 
     @include media ($horizontal-bar-mode) {
       display: block;
-      text-align: center;
+      text-align: left;
     }
   }
 
@@ -100,6 +100,9 @@
       margin-left: $centered-navigation-item-nudge;
     }
   }
+#moneros {
+  margin-left: 27%;
+}
 
   ul li.nav-link {
     background: $centered-navigation-background;
@@ -112,7 +115,7 @@
     z-index: 9999;
 
     a {
-      color: $centered-navigation-color;
+      color: #000;
       display: inline-block;
       text-decoration: none;
       font-family: Georgia, Times, Times New Roman, serif;
@@ -135,9 +138,9 @@
   .logo.nav-link img {
     display: none;
     line-height: 0;
-    margin-left: 0%;
+    margin-left: 80%;
     text-align: center;
-    max-height: $centered-navigation-logo-height*1.5;
+    max-height: $centered-navigation-logo-height*1.9;
     @include media($large-screen) {
       display: inline;
     }
@@ -147,13 +150,13 @@
     margin-bottom: -$centered-navigation-logo-height / 3;
     max-height: $centered-navigation-logo-height;
     margin-left: 0%;
-    opacity: .6;
+    opacity: 1;
   }
 
   .headerline{
-    background-color: rgba(153, 153, 153, 0.44); 
+    background-color: rgba(0,0,0,1); 
     position: relative;
-    left: -2%;
+    left: 0%;
     top: 6%;
     width: 100%;
     height: 2px;

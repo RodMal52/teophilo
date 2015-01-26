@@ -15,8 +15,8 @@
   background-color: #132E37;
   color: #fff;
   height: 3%;
-  width: 60%;
-  left: 20%;
+  width: 78%;
+  left: 11%;
   position: relative;
 }
 
@@ -87,14 +87,15 @@
 
 .container1 {
   background-image: url("1.png");
-  height: 230%;
-  width:100%;
-  background-size:80%;
+  height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   left: 20%;
-  
+  border: solid 2px rgba(39, 93, 110, 1);
+
 
 }
 
@@ -195,6 +196,7 @@
 .texto{
   width: 100%;
   position: relative;
+  font-color: #000;
   left: 3%;
   top: 2%;
   font-size: 1.5vw;
@@ -222,94 +224,102 @@
 
 .container2 {
   background-image: url("2.png");
- height: 230%;
-  width:100%;
-  background-size: 80%;
+ height: 90%;
+  width:80%;
+  background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   left: 10%;
+  border: solid 2px rgba(39, 93, 110, 1);
   }
 
   
 
 .container2alt1 {
   background-image: url("2alt1.jpg");
-   height: 230%;
-  width:100%;
-  background-size:80%;
+   height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   left: 10%;
+  border: solid 2px rgba(39, 93, 110, 1);
 }
 
 
 
 .container3 {
   background-image: url("3.png");
-    height: 230%;
-  width:100%;
-  background-size:80%;
+    height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
-  left: -2%;
+  left: 0%;
+  border: solid 2px rgba(39, 93, 110, 1);
   }
 
 .container4 {
   background-image: url("5.png");
-   height: 230%;
-  width:100%;
-  background-size:80%;
+   height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   left: 20%;
+  border: solid 2px rgba(39, 93, 110, 1);
   }
 
 .container4alt1 {
   background-image: url("4alt1.jpg");
-    height: 230%;
-  width:100%;
-  background-size:80%;
+    height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   left: 20%;
+  border: solid 2px rgba(39, 93, 110, 1);
 }
 
 .container5 {
   background-image: url("4.png");
-    height: 230%;
-  width:100%;
-  background-size:80%;
+  height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
   left: 10%;
+  border: solid 2px rgba(39, 93, 110, 1);
   }
 
 .container6 {
   background-image: url("6.png");
-    height: 230%;
-  width:100%;
-  background-size:80%;
+   height: 90%;
+  width:80%;
+  background-size:100%;
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
-    left: -2%;
+  left: 0%;
+  border: solid 2px rgba(39, 93, 110, 1);
   }
 
 
 .controlsdiv{
+  background-image: url(http://static.parastorage.com/services/skins/2.995.7/images/wysiwyg/core/themes/base/apple_box.png);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   width:32%;
   height:15%;
-  left: 5%;
+  left: 11%;
   position: relative;
-  margin-top:5%;
-  border-width:1px;
-  border-style: solid;
+  margin-top:-3%;
+  border: 0px solid rgba(102, 102, 102, 1);
 }
 
 .corona{
@@ -351,7 +361,7 @@
 .calendar{
   position: relative;
   margin-top: -7%;
-  left: 40%;
+  left: 50%;
   width: 10%;
   margin-bottom: 15%;
 }
@@ -398,10 +408,10 @@ input.datepp {
 
 .share{
   position: relative;
-  width: 43%;
-  left: 55%;
-  margin-top: 1%;
-  margin-bottom: 12%;
+  width: 39%;
+  left: 60%;
+  margin-top: -16%;
+  margin-bottom: 20%;
 }
 
 .social_ext2{
@@ -422,14 +432,7 @@ input.datepp {
   left: 6%;
  
 }
-/*
-.columnas{
-  width: 100%;
-  position: relative;
-  
-  margin-top: -25%;
-}
-*/
+
 .columnas  tr td{
   font-family: "Parisian";
   font-size: 3.7vw;
@@ -487,6 +490,44 @@ input.datepp {
   left: 25%;
   width: 30%;
 }
+.footer-bar{
+  background-color: #000;
+  position: relative;
+  width: 104%;
+  height: 15%;
+  z-index: 999;
+  left: -2%;
+
+}
+.footer-bar ul{
+  position: relative;
+  left: 25%;
+  width: 50%;
+  list-style-type: none;
+  text-align: center;
+}
+
+ h2, h3, h6 {
+  font-family: Georgia, Times, Times New Roman, serif;
+
+ }
+
+ .cont_margin {
+  @include outer-container;
+  margin-top: 5%;
+
+ }
+
+
+.footer-bar li a{
+  color: #fff;
+  font-family: Georgia, Times, Times New Roman, serif;
+  line-height: 1.3vw;
+  font-size: 1.3vw;
+
+}
+
+
 /*
 @media only screen and (min-width : 321px) {
   .fb_ext{

@@ -36,22 +36,21 @@
   .grid-item {
     @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
-    border-bottom: $grid-item-border;
-    border-right: $grid-item-border;
+    
     cursor: pointer;
     float: left;
     height: $grid-item-height;
     overflow: hidden;
-    padding: 0.5em;
+    padding: 0.0em;
     width: 100%;
 
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
     }
 
-    &:hover {
+   /* &:hover {
       background: transparentize($grid-item-color, .95);
-    }
+    }*/
   }
 
   .grid-item img {
@@ -68,10 +67,10 @@
     }
 
   .grid-item p {
-      color: transparentize($grid-item-color, .4);
+      color: #000;
       
       @include media($medium-screen) {
-        max-width: 75%;
+        max-width: 97%;
       }
     }
 

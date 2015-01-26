@@ -30,6 +30,12 @@
     <div><strong>Sitio Web Personal</strong><br/>
     <%=f.text_field :sitio, required: true %></div>
 
+    <div><strong>Breve Biografía</strong><br/>
+    <%=f.text_field :bio, required: true %></div>
+
+    <div><strong>Zona Geográfica</strong><br/>
+    <%=f.text_field :zona, required: true %></div>
+
 
   <div><%= f.submit "Crear Cuenta" %></div>
 <% end %>

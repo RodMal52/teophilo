@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root :to => 'home#index'
 
   get 'teo', :to => 'home#teo'
+  get 'nuestras_voces', :to => 'home#voces'
   get 'archivo', :to => 'home#archivo'
   get 'colabora', :to => 'home#colabora'
   get 'tienda', :to => 'home#tienda'
