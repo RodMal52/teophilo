@@ -1,77 +1,101 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Teophilov2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Teophilo</title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale1, user-scalable=no">
-</head>
-<body>
-	<script type="text/javascript">
-		$(document).ready(function() {
-		  var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-		  $('#js-centered-navigation-menu').removeClass("show");
-		  
-		  menuToggle.on('click', function(e) {
-		    e.preventDefault();
-		    $('#js-centered-navigation-menu').slideToggle(function(){
-		      if($('#js-centered-navigation-menu').is(':hidden')) {
-		        $('#js-centered-navigation-menu').removeAttr('style');
-		      }
-		    });
-		  });
-		});
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 
-	</script>
-	<header class="centered-navigation" role="banner">
-	  <div class="centered-navigation-wrapper">
-	    <a href="/" class="mobile-logo">
-	      <%= image_tag('logo2.png') %>
-	    </a>
-	    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-	    <nav role="navigation">
-	      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-		    <li class="nav-link"><a href="https://www.facebook.com/soyTeophilo?fref=ts
-Teophilo">
-	          <%=image_tag("facebook.png") %>
-	          </a></li>
-	        <li class="nav-link"><a href="https://twitter.com/SOYTEOPHILO">
-	          <%=image_tag("tw.png") %>
-	        </a></li>
-	        <li class="nav-link"><a href="javascript:void(0)">
-	          <%=image_tag("pinterest2.png") %>
-	        </a></li>
-	        <li class="nav-link"><a href="http://soyteophilo.tumblr.com/">
-	          <%=image_tag("tumblr2.png") %>
-	        </a></li>
-	        <li class="nav-link"><a href="https://plus.google.com/108922343993347697522/posts">
-	          <%=image_tag("gplus.png") %>
-	        </a></li>
-	        <li class="nav-link logo">
-	          <a href="/" class="logo">
-	           <%= image_tag('logo2.png') %>
-	          </a>
-	          
 
-	      </li>
+  </head>
+
+  <body>
+
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+           
+          <li class="name"> </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
      
-	        <li class="nav-link" id="moneros"><a href="javascript:void(0)">MONEROS</a></li>
-	
-	        <li class="nav-link"><a href="/nuestras_voces">NUESTRAS VOCES</a></li>
-	       
-	        <li class="nav-link"><a href="https://teophiloequipo.wordpress.com/">BLOGS</a></li>
-	      
-	        
-	      </ul>
-	      <div class="headerline"></div>
-	      
-	    </nav>
-	  </div>
-	</header>
+        <section class="top-bar-section">
+           
+          <ul class="left">
+            <li class="divider"></li>
+            <li>
+              <a class="active" href="https://www.facebook.com/soyTeophilo?fref=tsTeophilo"><img src="/assets/facebook.png"></a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="https://twitter.com/SOYTEOPHILO"><img src="/assets/tw.png"></a></li>
+            <li class="divider"></li>
+            <li>
+              <a class="active" href="javascript:void(0)"><img src="/assets/pinterest2.png"></a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a class="active" href="http://soyteophilo.tumblr.com/"><img src="/assets/tumblr2.png"></a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a class="active" href="https://plus.google.com/108922343993347697522/posts"><img src="/assets/gplus.png"></a>
+            </li>
+            <li class="divider"></li>
+           
+          </ul>
+          <ul>
+            
+            <li class="title_logo"><a href="/"><img src="/assets/logo2.png"></a></li>
+            
+            
+          </ul>
+          
+           
+          <ul class="right">
+            <li class="divider"></li>
+            <li>
+              <a href="#">Moneros</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="/nuestras_voces">Nuestras Voces</a></li>
+            <li class="divider"></li>
+            <li>
+              <a href="https://teophiloequipo.wordpress.com/" target="_blank">Blog</a>
+            </li>
+          </ul>
+        </section>
+        <hr>
+      </nav>
+
+    <%= yield %>
 
 
-<%= yield %>
+       <footer class="row">
+        <div class="large-12 columns">
+          <hr/>
+          <div class="row">
+            <div class="large-4 columns">
+              <p>© Copyright TEOPHILO 2015.</p>
+            </div>
+            <div class="large-8 columns">
+              <ul class="inline-list right">
+                <li><a href="#">AVISO DE PRIVACIDAD</a></li>
+                <li><a href="#">CODIGO DE ETICA</a></li>
+                <li><a href="/login">HERRAMIENTAS COLABORADORES</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-</body>
+  </body>
 </html>
+

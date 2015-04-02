@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   resources :tiras
+  resources :tags, only: [:index, :show]
   authenticated :user do
   	root :to => "tiras#index", :as => "dashboard"  
   	
   end
 
   root :to => 'home#index'
-
+  post '/', :to => 'home#index'
   get 'teo', :to => 'home#teo'
   get 'nuestras_voces', :to => 'home#voces'
   get 'archivo', :to => 'home#archivo'

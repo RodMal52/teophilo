@@ -1,5 +1,6 @@
 class Tira < ActiveRecord::Base
   belongs_to :user
+  acts_as_taggable
 
   def self.get_previous_tira(current_tira)   
      Tira.where("tiras.id < ? ", current_tira.id).order('created_at asc').last

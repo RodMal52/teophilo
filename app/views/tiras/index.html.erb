@@ -7,6 +7,7 @@
       <th>Autor</th>
       <th>Título</th>
       <th>Fecha</th>
+      <th>Tags</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
         <td><%= tira.user.first_name %></td>
         <td><%= tira.titulo %></td>
         <td><%= tira.created_at.strftime('%F')%></td>
+        <td><%= render tira.tags %></td>
         <td><%= link_to 'Editar', edit_tira_path(tira) %></td>
         <td><%= link_to 'Eliminar', tira, method: :delete, data: { confirm: 'Eliminar?' } %></td>
       </tr>
@@ -28,5 +30,5 @@
 
 <%= link_to 'Crear Nueva Tira', new_tira_path %><br>
 <%= link_to 'Editar Perfil', edit_registration_path(current_user) %><br>
-<%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %>
+<%= link_to 'Logout', destroy_user_session_path, method: :get %>
 </div>

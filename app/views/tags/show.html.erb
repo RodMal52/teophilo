@@ -1,0 +1,27 @@
+<div class="centersection">
+	<h1>Tiras con el tag: <%= @tag.name %></h1>
+	<table>
+	  <thead>
+	    <tr>
+	      <th>Fecha</th>
+	      <th>Título</th>
+	            <th colspan="1"></th>
+
+	    </tr>
+	  </thead>
+
+	  <tbody>
+	    <% @tiras.each do |tira| %>
+	      <tr>
+	      	<td><%= tira.created_at.strftime('%F') %></td>
+	        <td><%= tira.titulo %></td>
+	        <td><%=form_tag root_path, :method => 'get' do %>
+					<%=hidden_field_tag :id, tira.id %>
+					<%=submit_tag "Leer Ahora", :name =>nil %> 
+				<% end%>
+			</td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
+</div>

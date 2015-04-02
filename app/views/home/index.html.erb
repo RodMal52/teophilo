@@ -1,77 +1,46 @@
-
 <%= render "comic"%>
 
-<% unless @tira.id == Tira.first.id %>
-	<%=form_tag root_path, :method => 'get' do %>
-		<%=hidden_field_tag :id, Tira.where(["id < ?", @tira.id]).last.id %>
-		<%=submit_tag "<", :name =>nil, :class => 'btn_right' %>
-	<% end%>	
-<%end%>  
-
-
-<% unless @tira.id == Tira.last.id %>
-	<%=form_tag root_path, :method => 'get' do %>
-		<%=hidden_field_tag :id, Tira.where(["id > ?", @tira.id]).first.id %>
-		<%=submit_tag ">", :name =>nil, :class => 'btn_left' %>
-	<% end%>	
-<%end%>    
-<div class="controlsdiv">
-	<div class="corona">
-		<svg style="width: 29px; height: 25px;" version="1.1" xmlns="http://www.w3.org/2000/svg">
-		<g transform="translate(-7.5,-8.5)">
-		<path d="M21.517064 26.041756c-4.996132 0,-9.155868 1.076971,-10.057085 2.500291l0.061585 0.479227c0.14936 -0.25281,0.389732 -0.493991,0.722025 -0.720407c0.52271 -0.358788,1.264556 -0.677834,2.201874 -0.948341c1.893041 -0.548497,4.404456 -0.849846,7.071601 -0.849846c2.667954 0,5.179369 0.30135,7.072309 0.849846c0.938127 0.270507,1.678456 0.589553,2.202582 0.948341c0.330878 0.226417,0.571957 0.467597,0.721317 0.720407l0.061079 -0.479227C30.673741 27.118828,26.514106 26.041756,21.517064 26.041756zM31.397081 29.54641c-0.193248 -1.529905,-4.542591 -2.75391,-9.880017 -2.75391c-5.336617 0,-9.685151 1.224106,-9.879208 2.75391c-0.004449 0.035292,-0.007382 0.069776,-0.007382 0.105068c0 0.000809,-0.000708 0.000809,-0.000708 0.000809c0 0.271922,0.130854 0.535249,0.375676 0.783711c1.177083 1.199735,4.98966 2.077593,9.511723 2.077593c4.522771 0,8.335449 -0.877857,9.513139 -2.077593c0.243304 -0.248462,0.374968 -0.511789,0.374968 -0.782902c0 0,0 -0.000809,0 -0.001618C31.405171 29.616186,31.40153 29.581601,31.397081 29.54641zM34.352531 11.922722c-0.535249 -0.166147,-1.135117 0.236731,-1.340904 0.899093c-0.184551 0.594104,0.012438 1.193971,0.440193 1.43141l-4.396366 9.680702l-0.839531 -11.396574c0.517553 -0.038326,0.960172 -0.514721,1.024791 -1.140982c0.071292 -0.689565,-0.344024 -1.298331,-0.928521 -1.358702c-0.583081 -0.06027,-1.114589 0.449901,-1.185881 1.139566c-0.065427 0.632328,0.278698 1.195387,0.785835 1.331399l-3.321519 9.855039L21.735491 11.363304c0.588744 -0.103045,1.03733 -0.616149,1.03733 -1.235938c0 -0.693913,-0.561744 -1.255657,-1.255758 -1.255657c-0.693913 0,-1.255657 0.561744,-1.255657 1.255657c0 0.619789,0.448384 1.132892,1.038139 1.235938l-2.854629 11.00037l-3.322328 -9.855039c0.50653 -0.136012,0.850554 -0.69907,0.785835 -1.331399c-0.071292 -0.689565,-0.6028 -1.199735,-1.186589 -1.139566c-0.583587 0.060371,-0.999004 0.669036,-0.927712 1.358702c0.064719 0.626261,0.507946 1.102656,1.0256 1.140982l-0.839633 11.396574l-4.396973 -9.680702c0.427755 -0.23754,0.624137 -0.837307,0.441002 -1.43141c-0.205787 -0.662362,-0.806464 -1.065139,-1.341713 -0.899093c-0.535249 0.166147,-0.802823 0.838116,-0.596935 1.500478c0.187484 0.603609,0.703621 0.990307,1.199027 0.928622l2.120975 13.760246c0.136821 -0.153708,0.3059 -0.302159,0.507946 -0.44626c0.541822 -0.385282,1.309455 -0.729306,2.28065 -1.021858c1.959884 -0.589654,4.560288 -0.913756,7.322996 -0.913756c2.762809 0,5.36392 0.324102,7.324614 0.913756c0.971094 0.292552,1.737917 0.636677,2.280548 1.021858c0.202147 0.144102,0.370518 0.29326,0.507946 0.447676l2.120267 -13.761662c0.495508 0.061686,1.011644 -0.325013,1.199027 -0.928622C35.155354 12.760838,34.886971 12.088869,34.352531 11.922722z"></path>
-		</g>
-		</svg>	
+<div class="row">
+	<div class="large-5 columns">
+		<div class="colaboras">
+			COLABORA
+		</div>
 	</div>
-	<div class="bigote">
-		<svg style="width: 37px; height: 10px;" version="1.1" xmlns="http://www.w3.org/2000/svg">
-		<g transform="translate(-1.5,-2.5)">
-		<path d="M35.905027 5.19411c-0.598526 0.872484,-1.894787 2.168997,-3.739719 2.168997c-1.844428 0,-3.540042 -1.595398,-5.135692 -2.592774c-1.595398 -0.997124,-2.742343 -1.744967,-4.736339 -1.744967c-1.673456 0,-2.9463 0.90975,-3.313927 1.203851c-0.367878 -0.293849,-1.640722 -1.203851,-3.313675 -1.203851c-1.9945 0,-3.141444 0.747843,-4.736843 1.744967c-1.595398 0.997376,-3.290761 2.592774,-5.135692 2.592774c-1.844931 0,-3.141444 -1.296261,-3.739467 -2.168997c0 0,-0.103993 -0.16518,-0.220576 -0.194641c-0.206223 -0.052374,-0.451224 0.099461,-0.228382 0.768239c0.349245 1.04698,1.945147 6.731091,9.074836 6.731091c0 0,5.22634 -0.099712,8.299799 -3.806194c3.072703 3.706229,8.30005 3.806194,8.30005 3.806194c7.129437 0,8.725591 -5.683859,9.074584 -6.731091c0.218058 -0.654426,0.096439 -0.793922,-0.177266 -0.768239C36.051825 5.011052,35.905027 5.19411,35.905027 5.19411z"></path>
-		</g>
-		</svg>
+	<div class="large-2 columns">
+		
 	</div>
-	<div class="autor_controls"><strong>POR <%=@tira.user.first_name %> <%=@tira.user.last_name %></strong></div>
-	<div class="autor_titulo"><%=@tira.user.cargo %> @ <%=@tira.user.inst %></div>
-	<div class="autor_link"><a href="http://<%=@tira.user.sitio %>"><%=@tira.user.sitio %></a></div>
-
-</div>
- 
-
- 
-
-<div class="calendar">
-	<svg style="width: 74px; height: 95px;" version="1.1" xmlns="http://www.w3.org/2000/svg">
-	<g transform="translate(-5.5,-7.5)">
-	<path d="M74.749839 8.212345H9.819596c-2.122224 0,-3.84324 1.713692,-3.84324 3.826884v86.346216c0 2.113192,1.721016 3.826884,3.84324 3.826884h64.930243c2.122224 0,3.84324 -1.713692,3.84324 -3.826884V12.039229C78.593079 9.926037,76.872063 8.212345,74.749839 8.212345zM42.42632 99.934637c-1.590306 0,-2.879254 -1.283461,-2.879254 -2.867c0 -1.583538,1.288947 -2.867,2.879254 -2.867c1.590306 0,2.879254 1.283461,2.879254 2.867C45.305574 98.651176,44.016626 99.934637,42.42632 99.934637zM73.146825 91.366177h-61.724215v-77.730756h61.724215V91.366177z"></path>
-	</g>
-	</svg>
-	<div class="dateholder">
-	<%= link_to "Archivo", archivo_path%>
+	<div class="large-5 columns">
+		<div class="colaboras">
+			¡ANÚNCIATE!
+		</div>
 	</div>
-	
+</div>
+<div class="row">
+	<div class="large-5 columns">
+		<%= image_tag("teocolabora.png", :class => "img_tbl") %>
+	</div>
+	<div class="large-2 columns">
+		
+	</div>
+	<div class="large-5 columns">
+		<%= image_tag("teoanuncia.png" , :class => "img_tbl") %>
+	</div>
+</div>
 
+<div class="row">
+	<div class="large-5 columns">
+		<p  class="table_text">Si quieres formar parte del equipo / escribir / dibujar / colaborar de alguna forma con Teo, manda un correo a aldaco@teophilo.com y nos ponemos en contacto.</p> 
+	</div>
+	<div class="large-2 columns">
+		
+	</div>
+	<div class="large-5 columns">
+		<p class="table_text">¡Manda un correo a larriva@teophilo.com y me pongo en contacto contigo!</p>
+	</div>
 </div>
-<div class="share">
-	<ul class="social_ext2">
-		<li><a href="#" class="fb_ext"><%= image_tag("fbcolor.png", :class => "img_li") %></a></li>
-		<li><a href="#" class="fb_ext"><%= image_tag("twcolor.png", :class => "img_li") %></a></li>
-		<li><a href="#" class="fb_ext"><%= image_tag("intcolor.png", :class => "img_li") %></a></li>
-		<li><a href="#" class="fb_ext"><%= image_tag("lincolor.png", :class => "img_li") %></a></li>
-		<li><a href="#" class="fb_ext"><%= image_tag("tumblrcolor.png", :class => "img_li") %></a></li>
-		<li><a href="#" class="fb_ext"><%= image_tag("gpluscolor.png", :class => "img_li") %></a></li>
-		<li><a href="#" class="fb_ext"><%= image_tag("pincolor.png", :class => "img_li") %></a></li>
-	</ul>
-</div>
-<div class="colaboras">
-	<table class="columnas">
-		<tr><td>COLABORA</td><td>¡ANÚNCIATE!</td></tr>
-		<tr><td><%= image_tag("teocolabora.png", :class => "img_tbl") %></td><td><%= image_tag("teoanuncia.png" , :class => "img_tbl") %></td></tr>
-		<tr><td><p  class="table_text">Si quieres formar parte del equipo / escribir / dibujar / colaborar de alguna forma con Teo, manda un correo a aldaco@teophilo.com y nos ponemos en contacto.</p> </td><td><p class="table_text">¡Manda un correo a larriva@teophilo.com y me pongo en contacto contigo!</p></td></tr>
 
-	</table>
-	
-</div>
 <div class="footerline">
+	<img src="assets/teofooter.png">
 	<div class="footer_mision">MISIÓN</div>
 	<div class="footer_text">
 		<p class="table_text2">Teophilo pretende crear un espacio plural –de ideas y arte– donde las idiosincrasias y propuestas de la diversidad nacional coexistan y construyan una sociedad más fraterna, libre y equitativa.</p>
@@ -79,11 +48,4 @@
 		<p class="table_text2">El igualitarismo (egalitarianism) debe reflejar una visión generosa, humana, y cosmopolita de una sociedad que reconozca a las personas como iguales en toda su diversidad. Se debe promover acuerdos institucionales que permitan la diversidad de talentos, las aspiraciones, las funciones y las culturas de las personas en beneficio de todos y que se reconozcan como de beneficio mutuo.</p>
 		</div>
 </div>
-<div class="footer-bar">
-	<ul>
-		<li><a href="#">AVISO DE PRIVACIDAD</a></li>
-		<li><a href="#">CODIGO DE ETICA</a></li>
-		<li><a href="/login">HERRAMIENTAS COLABORADORES</a></li>
-	</ul>
-	
-</div>
+

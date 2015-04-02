@@ -1,3 +1,4 @@
+
 <div class="form_new">
 <%= form_for(@tira) do |f| %>
   <% if @tira.errors.any? %>
@@ -13,7 +14,7 @@
   <% end %>
 
     <%= f.hidden_field :user_id, :value => @user.id  %>
-  </div>
+
   <div class="field">
     <%= f.label :titulo %><br>
     <%= f.text_field :titulo %>
@@ -24,29 +25,50 @@
     <%= f.select :personaje_cuadro1, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
-    <%= f.label :text1 %><br>
+    <p>Diálogo Teo (Cuadro 1)</p>
     <%= f.text_field :text1 %>
   </div>
   <div class="field">
-    <%= f.label :texto_personaje_cuadro1 %> <br>
+    <p>Diálogo Personaje (Cuadro 1) (En blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro1 %>
   </div>
 
   <div class="field">
     <p>Personajes Cuadro 2</p>
-    <%= f.select :personaje_cuadro2, options_for_select(%w[Teo Teo_y_Camila])%>
+    <%= f.select :personaje_cuadro2, options_for_select(%w[Teo Teo_y_Camila Teo_y_Clara Teo_y_Don_German Teo_y_Guille Teo_e_Iker Teo_e_Irene Teo_y_Juana_Maria Teo_y_Santiago])%>
   </div>
   <div class="field">
-    <%= f.label :text2 %><br>
+    <p>Diálogo Personaje (Cuadro 2) (En blanco si no hay)</p>
     <%= f.text_field :text2 %>
     <script type="text/javascript">
       jQuery(document).ready(function () {
             $("#tira_personaje_cuadro2").on("change", function () {
                 if (this.value == "Teo_y_Camila"){
-                  $("#formcontainer2").removeClass("formcontainer2").addClass("formcontainer2alt1");
+                  $("#img_2").attr("src","/assets/2alt1.png");
+                }
+                if (this.value == "Teo_y_Clara"){
+                  $("#img_2").attr("src","/assets/2alt2.png");
+                }
+                if (this.value == "Teo_y_Don_German"){
+                  $("#img_2").attr("src","/assets/2alt3.png");
+                }
+                if (this.value == "Teo_y_Guille"){
+                  $("#img_2").attr("src","/assets/2alt4.png");
+                }
+                if (this.value == "Teo_e_Iker"){
+                  $("#img_2").attr("src","/assets/2alt5.png");
+                }
+                if (this.value == "Teo_e_Irene"){
+                  $("#img_2").attr("src","/assets/2alt6.png");
+                }
+                if (this.value == "Teo_y_Juana_Maria"){
+                  $("#img_2").attr("src","/assets/2alt7.png");
+                }
+                if (this.value == "Teo_y_Santiago"){
+                  $("#img_2").attr("src","/assets/2alt8.png");
                 }
                  if (this.value == "Teo"){
-                  $("#formcontainer2").removeClass("formcontainer2alt1").addClass("formcontainer2");
+                  $("#img_2").attr("src","/assets/2.png");;
                 }
                 
             });
@@ -55,7 +77,7 @@
 
   </div>
   <div class="field">
-    <%= f.label :texto_personaje_cuadro2 %> <br>
+    <p>Diálogo Teo (Cuadro 2)</p>
     <%= f.text_field :texto_personaje_cuadro2 %>
   </div>
 
@@ -64,28 +86,49 @@
     <%= f.select :personaje_cuadro3, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
-    <%= f.label :text3 %><br>
+    <p>Diálogo Teo (Cuadro 3)</p>
     <%= f.text_field :text3 %>
   </div>
   <div class="field">
-    <%= f.label :texto_personaje_cuadro3 %> <br>
+    <p>Diálogo Personaje (Cuadro 3) (En blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro3 %>
   </div>
   <div class="field">
     <p>Personajes Cuadro 4</p>
-    <%= f.select :personaje_cuadro4, options_for_select(%w[Teo Teo_y_Camila])%>
+    <%= f.select :personaje_cuadro4, options_for_select(%w[Teo Teo_y_Camila Teo_y_Clara Teo_y_Don_German Teo_y_Guille Teo_e_Iker Teo_e_Irene Teo_y_Juana_Maria Teo_y_Santiago])%>
   </div>
   <div class="field">
-    <%= f.label :text4 %><br>
+    <p>Diálogo Teo (Cuadro 4)</p>
     <%= f.text_field :text4 %>
     <script type="text/javascript">
       jQuery(document).ready(function () {
             $("#tira_personaje_cuadro4").on("change", function () {
-                if (this.value == "Teo_y_Camila"){
-                  $("#formcontainer4").removeClass("formcontainer4").addClass("formcontainer4alt1");
+                 if (this.value == "Teo_y_Camila"){
+                  $("#img_4").attr("src","/assets/4alt1.png");
                 }
-                if (this.value == "Teo"){
-                  $("#formcontainer4").removeClass("formcontainer4alt1").addClass("formcontainer4");
+                if (this.value == "Teo_y_Clara"){
+                  $("#img_4").attr("src","/assets/4alt2.png");
+                }
+                if (this.value == "Teo_y_Don_German"){
+                  $("#img_4").attr("src","/assets/4alt3.png");
+                }
+                if (this.value == "Teo_y_Guille"){
+                  $("#img_4").attr("src","/assets/4alt4.png");
+                }
+                if (this.value == "Teo_e_Iker"){
+                  $("#img_4").attr("src","/assets/4alt5.png");
+                }
+                if (this.value == "Teo_e_Irene"){
+                  $("#img_4").attr("src","/assets/4alt6.png");
+                }
+                if (this.value == "Teo_y_Juana_Maria"){
+                  $("#img_4").attr("src","/assets/4alt7.png");
+                }
+                if (this.value == "Teo_y_Santiago"){
+                  $("#img_4").attr("src","/assets/4alt8.png");
+                }
+                 if (this.value == "Teo"){
+                  $("#img_4").attr("src","/assets/4.png");;
                 }
                 
             });
@@ -93,7 +136,7 @@
   </script>
   </div>
   <div class="field">
-    <%= f.label :texto_personaje_cuadro4 %> <br>
+    <<p>Diálogo Personaje (Cuadro 4) (En blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro4 %>
   </div>
   <div class="field">
@@ -101,26 +144,63 @@
     <%= f.select :personaje_cuadro5, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
-    <%= f.label :text5 %><br>
+    <p>Diálogo Teo (Cuadro 5)</p>
     <%= f.text_field :text5 %>
   </div>
   <div class="field">
-    <%= f.label :texto_personaje_cuadro5 %> <br>
+    <p>Diálogo Personaje (Cuadro 5) (En blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro5 %>
   </div>
   <div class="field">
     <p>Personajes Cuadro 6</p>
-    <%= f.select :personaje_cuadro6, options_for_select(%w[Teo])%>
+    <%= f.select :personaje_cuadro6, options_for_select(%w[Teo Teo_y_Camila Teo_y_Clara Teo_y_Don_German Teo_y_Guille Teo_e_Iker Teo_e_Irene Teo_y_Juana_Maria Teo_y_Santiago])%>
   </div>
   <div class="field">
-    <%= f.label :text6 %><br>
+    <p>Diálogo Teo (Cuadro 6)</p>
     <%= f.text_field :text6 %>
+    <script type="text/javascript">
+      jQuery(document).ready(function () {
+            $("#tira_personaje_cuadro6").on("change", function () {
+                 if (this.value == "Teo_y_Camila"){
+                  $("#img_6").attr("src","/assets/6alt1.png");
+                }
+                if (this.value == "Teo_y_Clara"){
+                  $("#img_6").attr("src","/assets/6alt2.png");
+                }
+                if (this.value == "Teo_y_Don_German"){
+                  $("#img_6").attr("src","/assets/6alt3.png");
+                }
+                if (this.value == "Teo_y_Guille"){
+                  $("#img_6").attr("src","/assets/6alt4.png");
+                }
+                if (this.value == "Teo_e_Iker"){
+                  $("#img_6").attr("src","/assets/6alt5.png");
+                }
+                if (this.value == "Teo_e_Irene"){
+                  $("#img_6").attr("src","/assets/6alt6.png");
+                }
+                if (this.value == "Teo_y_Juana_Maria"){
+                  $("#img_6").attr("src","/assets/6alt7.png");
+                }
+                if (this.value == "Teo_y_Santiago"){
+                  $("#img_6").attr("src","/assets/6alt8.png");
+                }
+                 if (this.value == "Teo"){
+                  $("#img_6").attr("src","/assets/6.png");;
+                }
+                
+            });
+        });
+  </script>
   </div>
   <div class="field">
-    <%= f.label :texto_personaje_cuadro6 %> <br>
+    <p>Diálogo Personaje (Cuadro 6) (En blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro6 %>
   </div>
-  
+  <div class="field">
+    <p>Tags: </p>
+    <%= f.text_field :tag_list %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

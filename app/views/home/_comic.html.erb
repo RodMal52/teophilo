@@ -1,4 +1,184 @@
-<h1 class="titulo"><%=@tira.titulo%></h1>
+
+
+<div class="comic-area">
+	<h1 class="titulo"><%=@tira.titulo%></h1>
+	<div class="row">   
+		<div class="large-4 columns">
+			<a href="#" data-reveal-id="myModal1" data-reveal>
+				<div class="panel">
+					<img src="/assets/1.png"/>
+					<p class="panel_char1" style="color: #000;"><%=@tira.text1%></p>
+					<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro1%></p>
+				</div>
+			</a>
+		</div>
+
+		<div class="large-4 columns">
+			<div class="panel">
+				<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+					<img src="/assets/2alt1.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Clara") %>
+					<img src="/assets/2alt2.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Don_German") %>
+					<img src="/assets/2alt3.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Guille") %>
+					<img src="/assets/2alt4.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_e_Iker") %>
+					<img src="/assets/2alt5.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_e_Irene") %>
+					<img src="/assets/2alt6.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Juana_Maria") %>
+					<img src="/assets/2alt7.png"/>
+				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Santiago") %>
+					<img src="/assets/2alt8.png"/>					
+				<% else %>
+					<img src="/assets/2.png"/>
+				<% end%>
+				<p class="panel_char11" style="color: #000; "><%=@tira.text2%></p>
+				<p class="panel_char22" style="color: #000; "><%=@tira.texto_personaje_cuadro2%></p>
+			</div>
+		</div>
+
+		<div class="large-4 columns">
+			<div class="panel">
+				<img src="/assets/3.png"/>
+				<p class="panel_char1" style="color: #000;"><%=@tira.text3%></p>
+				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro3%></p>
+			</div>
+		</div>
+	</div>
+
+
+<div class="arrows">
+<div class="btn-left">
+<% unless @tira.id != Tira.first.id %>
+<div class="compensador"></div>
+<% end %>
+<% unless @tira.id == Tira.first.id %>
+	<%=form_tag root_path, :method => 'get' do %>
+		<%=hidden_field_tag :id, Tira.where(["id < ?", @tira.id]).last.id %>
+		<%=submit_tag "<", :name =>nil, :class => 'button' %>
+	<% end%>	
+<%end%>  
+</div>
+
+<div class="btn-right">
+<% unless @tira.id == Tira.last.id %>
+	<%=form_tag root_path, :method => 'get' do %>
+		<%=hidden_field_tag :id, Tira.where(["id > ?", @tira.id]).first.id %>
+		<%=submit_tag ">", :name =>nil, :class => 'button' %>
+	<% end%>	
+<%end%>  
+ </div>
+ </div>
+	<div class="row">   
+		<div class="large-4 columns">
+			<div class="panel">
+				<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+					<img src="/assets/4alt1.png"/>
+				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Clara") %>
+					<img src="/assets/4alt2.png"/>
+				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Don_German") %>
+					<img src="/assets/4alt3.png"/>
+				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Guille") %>
+					<img src="/assets/4alt4.png"/>
+				<% elsif (@tira.personaje_cuadro4 == "Teo_e_Iker") %>
+					<img src="/assets/4alt5.png"/>
+					<% elsif (@tira.personaje_cuadro4 == "Teo_e_Irene") %>
+					<img src="/assets/4alt6.png"/>
+				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Juana_Maria") %>
+					<img src="/assets/4alt7.png"/>
+				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Santiago") %>
+					<img src="/assets/4alt8.png"/>	
+				<% else %>
+					<img src="/assets/4.png"/>
+				<% end %>
+				<p class="panel_char1" style="color: #000;"><%=@tira.text4%></p>
+				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro4%></p>
+			</div>
+		</div>
+
+		<div class="large-4 columns">
+			<div class="panel">
+				<img src="/assets/5.png"/>
+				<p class="panel_char1" style="color: #000;"><%=@tira.text5%></p>
+				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro5%></p>
+			</div>
+		</div>
+
+		<div class="large-4 columns">
+			<div class="panel">
+				<% if (@tira.personaje_cuadro6 == "Teo_y_Camila") %>
+					<img src="/assets/6alt1.png"/>
+				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Clara") %>
+					<img src="/assets/6alt2.png"/>
+				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Don_German") %>
+					<img src="/assets/6alt3.png"/>
+				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Guille") %>
+					<img src="/assets/6alt4.png"/>
+				<% elsif (@tira.personaje_cuadro6 == "Teo_e_Iker") %>
+					<img src="/assets/6alt5.png"/>
+					<% elsif (@tira.personaje_cuadro6 == "Teo_e_Irene") %>
+					<img src="/assets/6alt6.png"/>
+				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Juana_Maria") %>
+					<img src="/assets/6alt7.png"/>
+				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Santiago") %>
+					<img src="/assets/6alt8.png"/>	
+				<% else %>
+					<img src="/assets/6.png"/>
+				<% end %>
+				<p class="panel_char1" style="color: #000;"><%=@tira.text6%></p>
+				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro6%></p>
+			</div>
+		</div>
+	</div>
+	<div class="autor_detalles">
+	<div class="portrait"></div>
+	<div class="section-detalles">
+		<div class="autor_controls"><strong><%=@tira.user.first_name %> <%=@tira.user.last_name %></strong></div>
+		<div class="autor_titulo"><%=@tira.user.cargo %> @ <%=@tira.user.inst %></div>
+		<div class="autor_link"><a href="http://<%=@tira.user.sitio %>"><%=@tira.user.sitio %></a></div></div>
+	</div>
+	<div class="tira_detalles">
+		<ul class="details-list">
+		<li  class="date_created" style="margin-top:3%;"><%= @tira.created_at.strftime('%F') %></li>
+		<li>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-original-aspect-ratio="0.8160644071985571" style="width: 21px; height: 25px; fill: #666666;">
+				<g transform="translate(-2.9722509384155273,-0.5921160578727722)">
+					<path d="M16.78459 15.29299c0 0,-0.475345 0.13113,-1.196557 0.376998c0 0,-1.278513 0.491737,-2.032509 0.934298c0 0,-0.049174 -1.753859,1.016255 -4.048627c0 0,3.06522 -0.185745,4.485748 -2.218254c0 0,1.1801 -1.355028,1.158268 -4.589536c0 0,-2.622592 -0.152963,-4.589536 1.879546c0 0,-1.049037 0.93974,-1.442426 4.545804c0 0,-1.092769 2.229203,-1.464259 3.168943c0 0,-0.611916 -1.07087,-1.049037 -4.982925c0 0,4.218046 -2.841119,0.874175 -7.671082c0 0,-4.567703 3.059713,-1.442426 7.62735c0 0,-0.284092 3.759027,1.201999 6.337953l-0.349657 1.682852c0 0,-0.69938 -0.852342,-2.70999 -2.46963c0 0,-0.305925 -0.163912,-0.448005 -0.633815c0 0,-0.841393 -2.414949,-3.584231 -2.524244c0 0,-0.896074 -0.098347,-2.240152 0.371556c0 0,0.743046 4.458407,5.725971 3.15806c0 0,0.120181 -0.142079,0.426172 0.218527c0 0,2.29444 2.546012,2.436651 3.190776L11.255182 24.98019c0 0,0.524452 0.611916,1.660953 0l0.284223 -6.381619c0 0,-0.021899 -1.005305,0.590017 -1.223898l2.797388 -1.573555c0 0,0.180434 -0.147521,0.344346 0.065565c0 0,3.392979 2.94104,6.441742 -0.897975C23.373853 14.968707,20.379967 11.737083,16.78459 15.29299z"></path>
+					<path d="M4.786231 5.573008c0 0,-1.529823 6.818806,5.026657 7.649249C9.812888 13.222257,11.430109 6.884304,4.786231 5.573008z"></path>
+					<path d="M18.231211 0.592116c0 0,-4.839272 1.381188,-3.106067 5.813697C15.125079 6.405813,19.690225 5.245512,18.231211 0.592116z"></path>
+					<path d="M22.689815 10.395628c0 0,-3.242442 -0.832608,-3.736211 2.294506C18.953604 12.690068,21.964471 13.557359,22.689815 10.395628z"></path>
+				</g>
+			</svg><span class="autor_titulo">Compartir</span>
+		</li>
+		<li style="margin-top:3%;"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" data-original-aspect-ratio="1.2777730439684813" style="width: 23px; height: 18px; fill: #666666;">
+				<g transform="translate(-1.113935947418213,-3.883967876434326)">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.635635 6.753544l-0.956364 -2.869576H2.070543l-0.956606 2.869576v0.956606H23.11394v-0.956606H11.635635zM1.113936 8.666513v10.598421c0 0.861432,1.023132 1.83649,1.846202 1.83649h18.240589c1.195515 0,1.91297 -0.918002,1.91297 -1.894275V8.666513H1.113936zM12.592241 18.231848h-1.91297V14.405666H7.809696l3.825697 -3.82594l3.826183 3.82594H12.592241V18.231848z"></path>
+				</g>
+			</svg><%= link_to "Archivo", archivo_path%></li>
+
+		<%=form_tag(:action=>"index") do |f| %>
+			<%=hidden_field_tag :id, @tira.id %>
+			<li><%= image_submit_tag "up.png", :name=>"like", :value => "Submit"%>   <span class="autor_titulo"><%= @tira.likes%></span></li>
+			<li><%= image_submit_tag "down.png", :name=>"dislike" , :value => "Submit"%>  <span class="autor_titulo"><%= @tira.dislikes%></span></li>
+		<%end%>
+		</ul>
+		<hr>
+		<span class="tags_links">Etiquetas: <%= render @tira.tags%></span>
+	</div>
+</div>
+
+
+<!--<div id="myModal1" class="reveal-modal" data-reveal>
+  <div class="panel">
+	<img src="/assets/1.png"/>
+	<p class="panel_char1" style="color: #000;"><%=@tira.text1%></p>
+	<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro1%></p>
+</div>
+  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
 
 <div class="grid-items-lines">
   <a href="#modal1" class="grid-item">
@@ -120,3 +300,4 @@
 	</div>
 	</div>
 </div>
+-->
