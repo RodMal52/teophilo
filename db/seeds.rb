@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 puts 'ROLES'
-YAML.load(ENV['ROLES']).each do |role|
+["admin","autor"].each do |role|
   Role.create(:name => role )
   puts 'role: ' << role
 end
