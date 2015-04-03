@@ -51,21 +51,21 @@
 
 <div class="arrows">
 <div class="btn-left">
-<% unless @tira.id != Tira.first.id %>
+<% unless @tira.id != Tira.where(aprobado: true).first.id %>
 <div class="compensador"></div>
 <% end %>
-<% unless @tira.id == Tira.first.id %>
+<% unless @tira.id == Tira.where(aprobado: true).first.id %>
 	<%=form_tag root_path, :method => 'get' do %>
-		<%=hidden_field_tag :id, Tira.where(["id < ?", @tira.id]).last.id %>
+		<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id < ?", @tira.id]).last.id %>
 		<%=submit_tag "<", :name =>nil, :class => 'button' %>
 	<% end%>	
 <%end%>  
 </div>
 
 <div class="btn-right">
-<% unless @tira.id == Tira.last.id %>
+<% unless @tira.id == Tira.where(aprobado: true).last.id %>
 	<%=form_tag root_path, :method => 'get' do %>
-		<%=hidden_field_tag :id, Tira.where(["id > ?", @tira.id]).first.id %>
+		<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id > ?", @tira.id]).first.id %>
 		<%=submit_tag ">", :name =>nil, :class => 'button' %>
 	<% end%>	
 <%end%>  

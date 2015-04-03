@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :tiras
   resources :tags, only: [:index, :show]
   authenticated :user do

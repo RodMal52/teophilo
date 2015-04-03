@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
     if params[:id]
-      @tira = Tira.find(params[:id])
+      @tira = Tira.where(aprobado: true).find(params[:id])
     else
-      @tira = Tira.last  
+      @tira = Tira.where(aprobado: true).last  
     end
   	if params[:like]
       @tira = Tira.find(params[:id])
@@ -20,7 +20,7 @@ class HomeController < ApplicationController
   
 
   def archivo
-    @tiras = Tira.all
+    @tiras = Tira.where(aprobado: true).all
   end
 
   def voces

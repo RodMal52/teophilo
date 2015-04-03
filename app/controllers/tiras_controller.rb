@@ -3,7 +3,8 @@ class TirasController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @tiras = Tira.all
+    @user = current_user
+    @tiras = @user.tiras.all
     
   end
 
