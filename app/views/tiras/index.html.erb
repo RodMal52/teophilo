@@ -8,8 +8,8 @@
       <th>Autor</th>
       <th>Título</th>
       <th>Fecha</th>
-      <th>Tags</th>
-      <th colspan="2"></th>
+      <th>Etiquetas</th>
+      <th colspan="1"></th>
     </tr>
   </thead>
 
@@ -21,7 +21,7 @@
         <td><%= tira.created_at.strftime('%F')%></td>
         <td><%= render tira.tags %></td>
         <td><%= link_to 'Editar', edit_tira_path(tira) %></td>
-        <td><%= link_to 'Eliminar', tira, method: :delete, data: { confirm: 'Eliminar?' } %></td>
+        
       </tr>
     <% end %>
   </tbody>
