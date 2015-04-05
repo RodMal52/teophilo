@@ -10,14 +10,22 @@ class ApplicationController < ActionController::Base
  
 
   def after_sign_in_path_for(resource)  #Authorization process CanCan and rolify
-    case current_user.roles.first.name #Checks the role of current user
-      when 'admin'  #If the role is admin it sends them to users_path, which is the pseudo admin screen
-        rails_admin_path
-      when 'autor' #if the role is bold_moves, it first checks that there is still a stripe subscription for that user and then redirects to bold_moves path (workouts); if not, it makes the role of the user nil revoking him of all access 
-        root_path
-      else #if there is no role, user is redirected to the root
-        root_path
+    unless current_user.roles.first.nil?
+      case current_user.roles.first.name #Checks the role of current user
+        when 'admin'  #If the role is admin it sends them to users_path, which is the pseudo admin screen
+          rails_admin_path
+        when 'autor' #if the role is bold_moves, it first checks that there is still a stripe subscription for that user and then redirects to bold_moves path (workouts); if not, it makes the role of the user nil revoking him of all access 
+          root_path
+        else #if there is no role, user is redirected to the root
+          
+          destroy_user_session_path
+      end
+    else
+
+        destroy_user_session_path
     end
+
+    
   end
 
     protected

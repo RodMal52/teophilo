@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'acts-as-taggable-on'
 gem 'cancancan', '~> 1.10'
-
+gem "carrierwave"
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 gem 'rails_12factor', group: :production
