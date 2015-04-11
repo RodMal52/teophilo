@@ -1,137 +1,182 @@
 
-
-<div class="comic-area">
-	<h1 class="titulo"><%=@tira.titulo%></h1>
-	<div class="row">   
-		<div class="large-4 columns">
-			<a href="#" data-reveal-id="myModal1" data-reveal>
-				<div class="panel">
-					<img src="/assets/1.png"/>
-					<p class="panel_char1" style="color: #000;"><%=@tira.text1%></p>
-					<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro1%></p>
-				</div>
-			</a>
-		</div>
-
-		<div class="large-4 columns">
-			<div class="panel">
-				<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
-					<img src="/assets/2alt1.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Clara") %>
-					<img src="/assets/2alt2.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Don_German") %>
-					<img src="/assets/2alt3.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Guille") %>
-					<img src="/assets/2alt4.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_e_Iker") %>
-					<img src="/assets/2alt5.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_e_Irene") %>
-					<img src="/assets/2alt6.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Juana_Maria") %>
-					<img src="/assets/2alt7.png"/>
-				<% elsif (@tira.personaje_cuadro2 == "Teo_y_Santiago") %>
-					<img src="/assets/2alt8.png"/>					
-				<% else %>
-					<img src="/assets/2.png"/>
-				<% end%>
-				<p class="panel_char11" style="color: #000; "><%=@tira.text2%></p>
-				<p class="panel_char22" style="color: #000; "><%=@tira.texto_personaje_cuadro2%></p>
-			</div>
-		</div>
-
-		<div class="large-4 columns">
-			<div class="panel">
-				<img src="/assets/3.png"/>
-				<p class="panel_char1" style="color: #000;"><%=@tira.text3%></p>
-				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro3%></p>
-			</div>
-		</div>
-	</div>
-
-
 <div class="arrows">
-<div class="btn-left">
-<% unless @tira.id != Tira.where(aprobado: true).first.id %>
-<div class="compensador"></div>
-<% end %>
-<% unless @tira.id == Tira.where(aprobado: true).first.id %>
-	<%=form_tag root_path, :method => 'get' do %>
-		<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id < ?", @tira.id]).last.id %>
-		<%=submit_tag "<", :name =>nil, :class => 'button' %>
-	<% end%>	
-<%end%>  
-</div>
+	
 
-<div class="btn-right">
-<% unless @tira.id == Tira.where(aprobado: true).last.id %>
-	<%=form_tag root_path, :method => 'get' do %>
-		<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id > ?", @tira.id]).first.id %>
-		<%=submit_tag ">", :name =>nil, :class => 'button' %>
-	<% end%>	
-<%end%>  
+	
+<div class="comic-area">
+	<table  class="tabla" width="100%">
+		<tr>
+			<td class="flechita_izq" >
+				<div class="btn-left">
+					<% unless @tira.id != Tira.where(aprobado: true).first.id %>
+						<div class="compensador"></div>
+					<% end %>
+					<% unless @tira.id == Tira.where(aprobado: true).first.id %>
+						<%=form_tag root_path, :method => 'get' do %>
+							<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id < ?", @tira.id]).last.id %>
+							<%=submit_tag "<", :name =>nil, :class => 'button' %>
+						<% end%>	
+				<%end%>  
+				</div>
+			</td>
+			<td class="main_area" >
+				<div class="comic_newmain">
+				<h1 class="titulo"><%=@tira.titulo%></h1>
+				<div class="row">   
+					<div class="large-4  medium-4 small-12 columns">
+						<a href="#" data-reveal-id="myModal1" data-reveal>
+							<div class="panel">
+								<img src="/assets/1.png"/>
+								<p class="panel_char1" style="color: #000;"><%=@tira.text1%></p>
+								<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro1%></p>
+							</div>
+						</a>
+					</div>
+
+					<div class="large-4 medium-4 small-12 columns">
+						<div class="panel">
+							<% if (@tira.personaje_cuadro2 == "Teo_y_Camila") %>
+								<img src="/assets/2alt1.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_y_Clara") %>
+								<img src="/assets/2alt2.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_y_Don_German") %>
+								<img src="/assets/2alt3.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_y_Guille") %>
+								<img src="/assets/2alt4.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_e_Iker") %>
+								<img src="/assets/2alt5.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_e_Irene") %>
+								<img src="/assets/2alt6.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_y_Juana_Maria") %>
+								<img src="/assets/2alt7.png"/>
+							<% elsif (@tira.personaje_cuadro2 == "Teo_y_Santiago") %>
+								<img src="/assets/2alt8.png"/>					
+							<% else %>
+								<img src="/assets/2.png"/>
+							<% end%>
+							<p class="panel_char11" style="color: #000; "><%=@tira.text2%></p>
+							<p class="panel_char22" style="color: #000; "><%=@tira.texto_personaje_cuadro2%></p>
+						</div>
+					</div>
+
+					<div class="large-4 medium-4 small-12 columns">
+						<div class="panel">
+							<img src="/assets/3.png"/>
+							<p class="panel_char1" style="color: #000;"><%=@tira.text3%></p>
+							<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro3%></p>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="row">   
+					<div class="large-4 medium-4 small-12 columns">
+						<div class="panel">
+							<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
+								<img src="/assets/4alt1.png"/>
+							<% elsif (@tira.personaje_cuadro4 == "Teo_y_Clara") %>
+								<img src="/assets/4alt2.png"/>
+							<% elsif (@tira.personaje_cuadro4 == "Teo_y_Don_German") %>
+								<img src="/assets/4alt3.png"/>
+							<% elsif (@tira.personaje_cuadro4 == "Teo_y_Guille") %>
+								<img src="/assets/4alt4.png"/>
+							<% elsif (@tira.personaje_cuadro4 == "Teo_e_Iker") %>
+								<img src="/assets/4alt5.png"/>
+								<% elsif (@tira.personaje_cuadro4 == "Teo_e_Irene") %>
+								<img src="/assets/4alt6.png"/>
+							<% elsif (@tira.personaje_cuadro4 == "Teo_y_Juana_Maria") %>
+								<img src="/assets/4alt7.png"/>
+							<% elsif (@tira.personaje_cuadro4 == "Teo_y_Santiago") %>
+								<img src="/assets/4alt8.png"/>	
+							<% else %>
+								<img src="/assets/4.png"/>
+							<% end %>
+							<p class="panel_char1" style="color: #000;"><%=@tira.text4%></p>
+							<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro4%></p>
+						</div>
+					</div>
+
+					<div class="large-4  medium-4 small-12 columns">
+						<div class="panel">
+							<img src="/assets/5.png"/>
+							<p class="panel_char1" style="color: #000;"><%=@tira.text5%></p>
+							<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro5%></p>
+						</div>
+					</div>
+
+					<div class="large-4 medium-4 small-12 columns">
+						<div class="panel">
+							<% if (@tira.personaje_cuadro6 == "Teo_y_Camila") %>
+								<img src="/assets/6alt1.png"/>
+							<% elsif (@tira.personaje_cuadro6 == "Teo_y_Clara") %>
+								<img src="/assets/6alt2.png"/>
+							<% elsif (@tira.personaje_cuadro6 == "Teo_y_Don_German") %>
+								<img src="/assets/6alt3.png"/>
+							<% elsif (@tira.personaje_cuadro6 == "Teo_y_Guille") %>
+								<img src="/assets/6alt4.png"/>
+							<% elsif (@tira.personaje_cuadro6 == "Teo_e_Iker") %>
+								<img src="/assets/6alt5.png"/>
+								<% elsif (@tira.personaje_cuadro6 == "Teo_e_Irene") %>
+								<img src="/assets/6alt6.png"/>
+							<% elsif (@tira.personaje_cuadro6 == "Teo_y_Juana_Maria") %>
+								<img src="/assets/6alt7.png"/>
+							<% elsif (@tira.personaje_cuadro6 == "Teo_y_Santiago") %>
+								<img src="/assets/6alt8.png"/>	
+							<% else %>
+								<img src="/assets/6.png"/>
+							<% end %>
+							<p class="panel_char1" style="color: #000;"><%=@tira.text6%></p>
+							<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro6%></p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</td>
+			<td class="flechita_der"><div class="btn-right">
+	<% unless @tira.id != Tira.where(aprobado: true).last.id %>
+			<div class="compensador"></div>
+		<% end %>
+		<% unless @tira.id == Tira.where(aprobado: true).last.id %>
+			<%=form_tag root_path, :method => 'get' do %>
+				<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id > ?", @tira.id]).first.id %>
+				<%=submit_tag ">", :name =>nil, :class => 'button' %>
+			<% end%>	
+		<%end%>  
+ 	</div>
+ </div></td>
+		</tr>
+	</table>
+<div class="arrowshidden">	
+<ul>
+	<li><div class="btn-left">
+					<% unless @tira.id != Tira.where(aprobado: true).first.id %>
+						<div class="compensador"></div>
+					<% end %>
+					<% unless @tira.id == Tira.where(aprobado: true).first.id %>
+						<%=form_tag root_path, :method => 'get' do %>
+							<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id < ?", @tira.id]).last.id %>
+							<%=submit_tag "<", :name =>nil, :class => 'button' %>
+						<% end%>	
+				<%end%>  
+				</div></li>
+				<li><div class="btn-right">
+	<% unless @tira.id != Tira.where(aprobado: true).last.id %>
+			<div class="compensador"></div>
+		<% end %>
+		<% unless @tira.id == Tira.where(aprobado: true).last.id %>
+			<%=form_tag root_path, :method => 'get' do %>
+				<%=hidden_field_tag :id, Tira.where(aprobado: true).where(["id > ?", @tira.id]).first.id %>
+				<%=submit_tag ">", :name =>nil, :class => 'button' %>
+			<% end%>	
+		<%end%>  
+ 	</div></li>
+ 	</ul>
  </div>
- </div>
-	<div class="row">   
-		<div class="large-4 columns">
-			<div class="panel">
-				<% if (@tira.personaje_cuadro4 == "Teo_y_Camila") %>
-					<img src="/assets/4alt1.png"/>
-				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Clara") %>
-					<img src="/assets/4alt2.png"/>
-				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Don_German") %>
-					<img src="/assets/4alt3.png"/>
-				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Guille") %>
-					<img src="/assets/4alt4.png"/>
-				<% elsif (@tira.personaje_cuadro4 == "Teo_e_Iker") %>
-					<img src="/assets/4alt5.png"/>
-					<% elsif (@tira.personaje_cuadro4 == "Teo_e_Irene") %>
-					<img src="/assets/4alt6.png"/>
-				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Juana_Maria") %>
-					<img src="/assets/4alt7.png"/>
-				<% elsif (@tira.personaje_cuadro4 == "Teo_y_Santiago") %>
-					<img src="/assets/4alt8.png"/>	
-				<% else %>
-					<img src="/assets/4.png"/>
-				<% end %>
-				<p class="panel_char1" style="color: #000;"><%=@tira.text4%></p>
-				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro4%></p>
-			</div>
-		</div>
 
-		<div class="large-4 columns">
-			<div class="panel">
-				<img src="/assets/5.png"/>
-				<p class="panel_char1" style="color: #000;"><%=@tira.text5%></p>
-				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro5%></p>
-			</div>
-		</div>
-
-		<div class="large-4 columns">
-			<div class="panel">
-				<% if (@tira.personaje_cuadro6 == "Teo_y_Camila") %>
-					<img src="/assets/6alt1.png"/>
-				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Clara") %>
-					<img src="/assets/6alt2.png"/>
-				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Don_German") %>
-					<img src="/assets/6alt3.png"/>
-				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Guille") %>
-					<img src="/assets/6alt4.png"/>
-				<% elsif (@tira.personaje_cuadro6 == "Teo_e_Iker") %>
-					<img src="/assets/6alt5.png"/>
-					<% elsif (@tira.personaje_cuadro6 == "Teo_e_Irene") %>
-					<img src="/assets/6alt6.png"/>
-				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Juana_Maria") %>
-					<img src="/assets/6alt7.png"/>
-				<% elsif (@tira.personaje_cuadro6 == "Teo_y_Santiago") %>
-					<img src="/assets/6alt8.png"/>	
-				<% else %>
-					<img src="/assets/6.png"/>
-				<% end %>
-				<p class="panel_char1" style="color: #000;"><%=@tira.text6%></p>
-				<p class="panel_char2" style="color: #000;"><%=@tira.texto_personaje_cuadro6%></p>
-			</div>
-		</div>
-	</div>
+ <table>
+ 	
+ </table>
 	<div class="autor_detalles">
 	<div class="portrait"><%=image_tag @tira.user.image %></div>
 	<div class="section-detalles">

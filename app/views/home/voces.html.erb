@@ -2,10 +2,14 @@
 	<h2>NUESTROS COLABORADORES</h2>
 	<%@users.each do |u|%>
 		<div style="margin-top: 2%; margin-bottom: 1%; position:relative; left: 5%;">
-			<h3><%= u.first_name %> <%= u.last_name %></h3>
+			<% if (u.image != " ") %>
+				<div class="sideimage"><%=image_tag u.image %></div>
+			<% end %>
+			<div class="voces"><h3><%= u.first_name %> <%= u.last_name %></h3>
 			<h6><%= u.cargo %> @ <%= u.inst %></h6>
 			<p> <%= u.bio %></p>
-			<a href="http://<%=u.sitio %>"><%=u.sitio %></a>
+			<a href="http://<%=u.sitio %>"><%=u.sitio %></a></div>
+			
 		</div>
 	<% end %>
 </div>
