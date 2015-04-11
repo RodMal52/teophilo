@@ -2,7 +2,7 @@
 	<h2>NUESTROS COLABORADORES</h2>
 	<%@users.each do |u|%>
 		<div style="margin-top: 2%; margin-bottom: 1%; position:relative; left: 5%;">
-			<% if (u.image != " ") %>
+			<% if (u.roles.first) %>
 				<div class="sideimage"><%=image_tag u.image %></div>
 			<% end %>
 			<div class="voces"><h3><%= u.first_name %> <%= u.last_name %></h3>
