@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  require 'rss'
   def index
     if params[:id]
       @tira = Tira.where(aprobado: true).find(params[:id])
@@ -32,6 +33,15 @@ class HomeController < ApplicationController
   def tienda
   end
   def teo
+  end
+  def blog
+    begin
+       @latest_blog_posts = RSS::Parser.parse(open('https://teophiloequipo.wordpress.com/feed/').read, false).items[0..2]
+     rescue
+       # Do nothing, just continue.  The view will skip the blog section if the feed is nil.
+       @latest_blog_posts = nil
+     end
+    
   end
   def etica
   end

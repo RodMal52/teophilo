@@ -36,7 +36,8 @@
 
     <div><strong>Zona Geográfica</strong><br/>
     <%=f.text_field :zona, required: true %></div>
-
+    
+    <div>Acepto <a href="/terms">términos y condiciones</a> <%=f.check_box :terms_of_service%></div>
 
   <div><%= f.submit "Crear Cuenta" %></div>
 <% end %>

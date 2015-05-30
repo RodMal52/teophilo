@@ -1,6 +1,23 @@
-<h1>Editando tira</h1>
+<h1 class="title_section2">EDITANDO TIRA</h1>
+
+
+
 <script type="text/javascript">
 			jQuery(document).ready(function () {
+				$("#1titulo").html(document.getElementById('tira_titulo').value);
+				$("#texto1").html(document.getElementById('tira_text1').value);
+				$("#textopersonajecuadro1").html(document.getElementById('tira_texto_personaje_cuadro1').value);
+				$("#texto2").html(document.getElementById('tira_text2').value);
+				$("#textopersonajecuadro2").html(document.getElementById('tira_texto_personaje_cuadro2').value);
+				$("#texto3").html(document.getElementById('tira_text3').value);
+				$("#textopersonajecuadro3").html(document.getElementById('tira_texto_personaje_cuadro3').value);
+				$("#texto4").html(document.getElementById('tira_text4').value);
+				$("#textopersonajecuadro4").html(document.getElementById('tira_texto_personaje_cuadro4').value);
+				$("#texto5").html(document.getElementById('tira_text5').value);
+				$("#textopersonajecuadro5").html(document.getElementById('tira_texto_personaje_cuadro5').value);
+				$("#texto6").html(document.getElementById('tira_text6').value);
+				$("#textopersonajecuadro6").html(document.getElementById('tira_texto_personaje_cuadro6').value);
+				
 				$("#1titulo").html(this.value);
 				$("#tira_titulo").on("change", function () {
 			        $("#1titulo").html(this.value);

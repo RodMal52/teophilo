@@ -1,0 +1,18 @@
+<h1  class="title_section">ÚLTIMAS ENTRADAS DE BLOG</h1>
+<% unless @latest_blog_posts.nil? %>
+ 
+ <ul class="pmision">
+  <% @latest_blog_posts.each do |post| %>
+   <% if nil != post && post.respond_to?(:pubDate) %>
+    <li>
+     <%= link_to post.title, post.link, :target => "_blank" %>
+     (<%= time_ago_in_words(post.pubDate) %> ago via Teophilo Blog)
+    </li>
+   <% end %>
+  <% end %>
+ </ul>
+<% else %>
+ <p>
+  <em>No hay entradas de blog que mostrar.</em>
+ </p>
+<% end %>

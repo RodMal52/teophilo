@@ -181,7 +181,9 @@
 	<div class="portrait"><%=image_tag @tira.user.image %></div>
 	<div class="section-detalles">
 		<div class="autor_controls"><strong><%=@tira.user.first_name %> <%=@tira.user.last_name %></strong></div>
-		<div class="autor_titulo"><%=@tira.user.cargo %> @ <%=@tira.user.inst %></div>
+		<div class="autor_titulo"><%=@tira.user.cargo %></div>
+		<div class="autor_titulo">@ <%=@tira.user.inst %></div>
+		
 		<div class="autor_link"><a href="http://<%=@tira.user.sitio %>"><%=@tira.user.sitio %></a></div></div>
 	</div>
 	<div class="tira_detalles">
@@ -203,14 +205,15 @@
 				</g>
 			</svg><%= link_to "Archivo", archivo_path%></li>
 
-		<%=form_tag(:action=>"index") do |f| %>
-			<%=hidden_field_tag :id, @tira.id %>
-			<li><%= image_submit_tag "up.png", :name=>"like", :value => "Submit"%>   <span class="autor_titulo"><%= @tira.likes%></span></li>
-			<li><%= image_submit_tag "down.png", :name=>"dislike" , :value => "Submit"%>  <span class="autor_titulo"><%= @tira.dislikes%></span></li>
-		<%end%>
+		
 		</ul>
 		<hr>
 		<span class="tags_links">Etiquetas: <%= render @tira.tags%></span>
+		<div class="likes"><%=form_tag(:action=>"index") do |f| %>
+			<%=hidden_field_tag :id, @tira.id %>
+			<%= image_submit_tag "up.png", :name=>"like", :value => "Submit"%>   <span class="autor_titulo"><%= @tira.likes%></span>
+			<%= image_submit_tag "down.png", :name=>"dislike" , :value => "Submit"%>  <span class="autor_titulo"><%= @tira.dislikes%></span>
+		<%end%></div>
 	</div>
 </div>
 

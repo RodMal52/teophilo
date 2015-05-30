@@ -1,12 +1,12 @@
 <div class="cont_margin" >
-	<h2>NUESTROS COLABORADORES</h2>
+	<h2 class="title_section">NUESTROS COLABORADORES</h2>
 	<%@users.each do |u|%>
 		<div style="margin-top: 2%; margin-bottom: 1%; position:relative; left: 5%;">
 			<% if (u.roles.first != nil) %>
 				<div class="sideimage"><%=image_tag u.image %></div>
 			<% end %>
-			<div class="voces"><h3><%= u.first_name %> <%= u.last_name %></h3>
-			<h6><%= u.cargo %> @ <%= u.inst %></h6>
+			<div class="voces"><h3 class="nombre_autor_voces"><%= u.first_name %> <%= u.last_name %></h3>
+			<h6 class="descrip_voces"><%= u.cargo %> @ <%= u.inst %></h6>
 			<p> <%= u.bio %></p>
 			<a href="http://<%=u.sitio %>"><%=u.sitio %></a></div>
 			

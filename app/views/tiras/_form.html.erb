@@ -1,4 +1,12 @@
-
+<script type="text/javascript">
+  $(function() {
+ 
+    $("form").bind("keypress", function(e) {
+            if (e.keyCode == 13) return false;
+      });
+ 
+});
+</script>
 <div class="form_new">
 <%= form_for(@tira) do |f| %>
   <% if @tira.errors.any? %>
@@ -15,30 +23,34 @@
 
     <%= f.hidden_field :user_id, :value => @user.id  %>
 
+  
   <div class="field">
-    <%= f.label :titulo %><br>
+    <p class="cuadro_title">TÍTULO</p><br>
     <%= f.text_field :titulo %>
   </div>
 
+<p class="cuadro_title">PRIMER CUADRO</p>
+<hr>
   <div class="field">
-    <p>Personajes Cuadro 1</p>
+    <p>Personajes</p>
     <%= f.select :personaje_cuadro1, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
-    <p>Diálogo Teo (Cuadro 1)</p>
+    <p>Diálogo Teo </p>
     <%= f.text_field :text1 %>
   </div>
   <div class="field">
-    <p>Diálogo Personaje (Cuadro 1) (En blanco si no hay)</p>
+    <p>Diálogo Personaje Extra (Dejar en blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro1 %>
   </div>
-
+<p class="cuadro_title">SEGUNDO CUADRO</p>
+<hr>
   <div class="field">
-    <p>Personajes Cuadro 2</p>
+    <p>Personajes</p>
     <%= f.select :personaje_cuadro2, options_for_select(%w[Teo Teo_y_Camila Teo_y_Clara Teo_y_Don_German Teo_y_Guille Teo_e_Iker Teo_e_Irene Teo_y_Juana_Maria Teo_y_Santiago])%>
   </div>
   <div class="field">
-    <p>Diálogo Personaje (Cuadro 2) (En blanco si no hay)</p>
+    <p>Diálogo Personaje Extra (Dejar en blanco si no hay)</p>
     <%= f.text_field :text2 %>
     <script type="text/javascript">
       jQuery(document).ready(function () {
@@ -77,28 +89,31 @@
 
   </div>
   <div class="field">
-    <p>Diálogo Teo (Cuadro 2)</p>
+    <p>Diálogo Teo</p>
     <%= f.text_field :texto_personaje_cuadro2 %>
   </div>
-
+<p class="cuadro_title">TERCER CUADRO</p>
+<hr>
   <div class="field">
-    <p>Personajes Cuadro 3</p>
+    <p>Personajes</p>
     <%= f.select :personaje_cuadro3, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
-    <p>Diálogo Teo (Cuadro 3)</p>
+    <p>Diálogo Teo</p>
     <%= f.text_field :text3 %>
   </div>
   <div class="field">
-    <p>Diálogo Personaje (Cuadro 3) (En blanco si no hay)</p>
+    <p>Diálogo Personaje Extra (Dejar en blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro3 %>
   </div>
+  <p class="cuadro_title">CUARTO CUADRO</p>
+<hr>
   <div class="field">
-    <p>Personajes Cuadro 4</p>
+    <p>Personajes</p>
     <%= f.select :personaje_cuadro4, options_for_select(%w[Teo Teo_y_Camila Teo_y_Clara Teo_y_Don_German Teo_y_Guille Teo_e_Iker Teo_e_Irene Teo_y_Juana_Maria Teo_y_Santiago])%>
   </div>
   <div class="field">
-    <p>Diálogo Teo (Cuadro 4)</p>
+    <p>Diálogo Teo</p>
     <%= f.text_field :text4 %>
     <script type="text/javascript">
       jQuery(document).ready(function () {
@@ -136,23 +151,27 @@
   </script>
   </div>
   <div class="field">
-    <p>Diálogo Personaje (Cuadro 4) (En blanco si no hay)</p>
+    <p>Diálogo Personaje Extra (Dejar en blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro4 %>
   </div>
+  <p class="cuadro_title">QUINTO CUADRO</p>
+<hr>
   <div class="field">
-    <p>Personajes Cuadro 5</p>
+    <p>Personajes</p>
     <%= f.select :personaje_cuadro5, options_for_select(%w[Teo])%>
   </div>
   <div class="field">
-    <p>Diálogo Teo (Cuadro 5)</p>
+    <p>Diálogo Teo</p>
     <%= f.text_field :text5 %>
   </div>
   <div class="field">
-    <p>Diálogo Personaje (Cuadro 5) (En blanco si no hay)</p>
+    <p>Diálogo Personaje Extra (Dejar en blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro5 %>
   </div>
+  <p class="cuadro_title">ÚLTIMO CUADRO</p>
+<hr>
   <div class="field">
-    <p>Personajes Cuadro 6</p>
+    <p>Personajes</p>
     <%= f.select :personaje_cuadro6, options_for_select(%w[Teo Teo_y_Camila Teo_y_Clara Teo_y_Don_German Teo_y_Guille Teo_e_Iker Teo_e_Irene Teo_y_Juana_Maria Teo_y_Santiago])%>
   </div>
   <div class="field">
@@ -194,15 +213,28 @@
   </script>
   </div>
   <div class="field">
-    <p>Diálogo Personaje (Cuadro 6) (En blanco si no hay)</p>
+    <p>Diálogo Personaje Extra (Dejar en blanco si no hay)</p>
     <%= f.text_field :texto_personaje_cuadro6 %>
   </div>
+  <p class="cuadro_title">ETIQUETAS (TAGS)</p>
+<hr>
   <div class="field">
-    <p>Tags: </p>
+    <p>Escriba una o más etiquetas a las cuales asociar la tira. </p>
+    <p>Separa cada etiqueta con una coma (,) seguida de un espacio. Debajo se muestra una lista de las etiquetas ya existentes, trate de utilizar una o más de ellas escribiendolas tal cual aparecen y en dado caso que una etiqueta apropiada para su tira no exista, puede crear una simplemente escribiendola en la caja de texto. </p>
     <%= f.text_field :tag_list %>
   </div>
+  <p>Etiquetas existentes:</p>
+  <ul>
+  <% ActsAsTaggableOn::Tag.all.each do |t|%>
+    <li><%=t.name %></li>
+  <% end %>
+  </ul>
+  <p class="cuadro_title">FINALIZAR</p>
+<hr>
   <div class="actions">
-    <%= f.submit %>
+    
+    <%= f.submit "CREAR TIRA" %><br/><br/>
+    <%= link_to 'Regresar', tiras_path %>
   </div>
 <% end %>
 </div>
